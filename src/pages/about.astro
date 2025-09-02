@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About Batteries.Guide | Comprehensive Battery Database';
+const description = 'Learn about the methodology, data sources, and mission to create the most comprehensive open-source battery specification database.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="bg-white">
+    <div class="mx-auto max-w-4xl px-4 pt-12 pb-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">About Batteries.Guide</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          The comprehensive, open-source database of objective battery specifications for every consumer battery type.
+        </p>
+      </div>
+
+      <!-- Mission -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6">The Mission</h2>
+        <div class="prose prose-lg text-gray-700 max-w-none">
+          <p class="mb-6">
+            Every time you need to buy batteries, you end up doing the same research all over again. What are the exact dimensions of a 9V? 
+            Which 18650 has the highest capacity? What devices use CR2025 vs CR2032? This information should be easily accessible, not scattered 
+            across dozens of manufacturer websites and buried in PDF datasheets.
+          </p>
+          <p class="mb-6">
+            batteries.guide attempts to solve this problem by creating a comprehensive, objective database of battery specifications. No opinions, 
+            no "best battery" recommendations — just reliable technical data sourced from manufacturer specifications and industry standards.
+          </p>
+          <p>
+            This is the battery reference site I wish existed every time I've searched for reliable specs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6">Data Sources & Methodology</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-gray-50 p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Primary Sources</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li><strong>IEC 60086 series</strong> - International standard for primary batteries</li>
+              <li><strong>ANSI C18 series</strong> - American National Standards Institute battery specifications</li>
+              <li><strong>Manufacturer datasheets</strong> - Energizer, Duracell, Panasonic, Samsung SDI, LG Chem, Sony</li>
+              <li><strong>Industry catalogs</strong> - Technical specifications from battery suppliers</li>
+            </ul>
+          </div>
+          
+          <div class="bg-gray-50 p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Quality Standards</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>Cross-reference multiple sources for verification</li>
+              <li>Cite original manufacturer specifications</li>
+              <li>Include uncertainty ranges where appropriate</li>
+              <li>Regular updates as new products are released</li>
+              <li>Trusted domain whitelist for source verification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 p-6 mb-8">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="w-6 h-6 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-medium text-slate-800">Objective Data Only</h3>
+              <p class="mb-0">
+                I deliberately avoid recommendations or "best battery" rankings. The goal is to provide accurate, comprehensive 
+                specifications so you can make informed decisions based on your specific requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="w-6 h-6 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Trusted Sources Policy</h3>
+              <p class="mb-3">
+                To maintain credibility and data quality, only sources from trusted domains are displayed on battery specification pages.
+              </p>
+              <div class="text-sm ">
+                <p class="font-medium mb-2">Accepted source types:</p>
+                <ul class="space-y-1">
+                  <li>Official manufacturer websites (Energizer, Duracell, Panasonic, etc.)</li>
+                  <li>Standards organizations (IEC, ANSI)</li>
+                  <li>Established technical references (Battery University, Battery Equivalents)</li>
+                  <li>Trusted retailers with technical specifications</li>
+                  <li>Wikipedia articles (crowd-sourced but established)</li>
+                </ul>
+                <p class="mt-4 text-xs">
+                  Sources like random Google Docs, unverified blogs, or questionable domains are automatically filtered out.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's Included -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6">What's Included</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Technical Specifications</h3>
+            <p class="text-gray-600 text-sm">
+              Voltage, capacity, dimensions, weight, temperature ranges, discharge characteristics, and cycle life data.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Standard Designations</h3>
+            <p class="text-gray-600 text-sm">
+              IEC codes, ANSI codes, common names, and cross-references between different naming systems.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Device Compatibility</h3>
+            <p class="text-gray-600 text-sm">
+              Common devices and applications for each battery type, helping you find the right replacement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Status -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6">Current Database</h2>
+        
+        <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white border-2 border-blue-200 p-6 text-center">
+            <div class="text-3xl font-bold text-blue-900 mb-2">17</div>
+            <div class="text-gray-900 font-medium">Battery Types</div>
+            <div class="text-sm text-gray-500 mt-1">Documented with full specs</div>
+          </div>
+          
+          <div class="bg-white border-2 border-green-200 p-6 text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">3</div>
+            <div class="text-gray-900 font-medium">Categories</div>
+            <div class="text-sm text-gray-500 mt-1">Traditional, Li-ion, Button cells</div>
+          </div>
+          
+          <div class="bg-white border-2 border-purple-200 p-6 text-center">
+            <div class="text-3xl font-bold text-purple-600 mb-2">100%</div>
+            <div class="text-gray-900 font-medium">Open Source</div>
+            <div class="text-sm text-gray-500 mt-1">All data freely available</div>
+          </div>
+        </div> -->
+
+        <div class="bg-gray-50 p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Currently Documented</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div>
+              <h4 class="font-medium text-gray-900 mb-2">Traditional Batteries</h4>
+              <ul class="space-y-1 text-gray-600">
+                <li>AA (LR6)</li>
+                <li>AAA (LR03)</li>
+                <li>AAAA (LR61)</li>
+                <li>C (LR14)</li>
+                <li>D (LR20)</li>
+                <li>N (LR1)</li>
+                <li>9V (6LR61)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900 mb-2">Lithium-ion</h4>
+              <ul class="space-y-1 text-gray-600">
+                <li>18650</li>
+                <li>21700</li>
+                <li>26650</li>
+                <li>14500 (AA size)</li>
+                <li>10440 (AAA size)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900 mb-2">Button Cells</h4>
+              <ul class="space-y-1 text-gray-600">
+                <li>CR2032</li>
+                <li>CR2025</li>
+                <li>CR2016</li>
+                <li>LR44 (AG13)</li>
+                <li>CR123A</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contributing -->
+      <!-- <section class="mb-16">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6">Contributing</h2>
+        
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-8">
+          <div class="max-w-3xl">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Help Expand the Database</h3>
+            <p class="text-gray-700 mb-6">
+              This project thrives on community contributions. Whether you're correcting specifications, adding new battery types, 
+              or improving documentation, your input makes the database better for everyone.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Ways to Contribute</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>Submit corrections via GitHub issues</li>
+                  <li>Add specifications for missing battery types</li>
+                  <li>Provide manufacturer datasheet references</li>
+                  <li>Improve device compatibility lists</li>
+                  <li>Suggest website improvements</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Data Standards</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>Always cite original sources</li>
+                  <li>Include measurement tolerances when available</li>
+                  <li>Cross-reference multiple manufacturers</li>
+                  <li>Follow existing JSON schema patterns</li>
+                  <li>Maintain objective, factual tone</li>
+                </ul>
+              </div>
+            </div>
+            
+            <a 
+              href="https://github.com" 
+              class="inline-flex items-center px-6 py-3 bg-blue-900 text-white font-medium hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-300 focus:outline-none"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Footer note -->
+      <div class="text-center text-gray-600 text-sm">
+        <p>
+          batteries.guide is an independent project focused on providing accurate, objective battery specifications. 
+          I am not affiliated with any battery manufacturer or retailer.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
