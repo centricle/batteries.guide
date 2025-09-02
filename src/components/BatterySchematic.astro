@@ -15,7 +15,7 @@ const schematicSvg = canGenerate ? generateBatterySchematic(battery) : null;
 {canGenerate && schematicSvg && (
   <section class="mb-8">
     <h2 class="text-2xl font-semibold text-gray-900 mb-4">Technical Drawing</h2>
-    <div class="bg-gray-50 p-6">
+    <div class="border border-gray-300 p-6">
       <div class="flex justify-center">
         <Fragment set:html={schematicSvg} />
       </div>

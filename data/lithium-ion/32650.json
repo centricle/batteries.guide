@@ -8,7 +8,7 @@
     "IFR32650"
   ],
   "chemistry": {
-    "li_ion": {
+    "lithium_ion": {
       "voltage_nominal": 3.7,
       "voltage_charged": 4.2,
       "voltage_min": 2.5,
@@ -42,7 +42,7 @@
   },
   "weight": {
     "unit": "g",
-    "li_ion": "120",
+    "lithium_ion": "120",
     "lifepo4": "140"
   },
   "temperature_range": {

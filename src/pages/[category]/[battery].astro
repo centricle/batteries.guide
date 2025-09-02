@@ -88,30 +88,30 @@ const description = `Complete technical specifications for ${battery.type} batte
             </div>
 
             <!-- Quick Specs -->
-            <div class="bg-gray-50 p-6 mb-8">
+            <div class="mb-8 border border-gray-300 p-6">
               <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Specifications</h2>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="text-center">
-                  <p class="text-gray-500 text-sm">Voltage</p>
-                  <p class="text-2xl font-bold text-gray-900">{primaryChemInfo.voltage_nominal}V</p>
+                  <p class="mb-1 text-sm text-gray-500">Voltage</p>
+                  <p class="mb-0 text-2xl font-bold text-gray-900">{primaryChemInfo.voltage_nominal}V</p>
                 </div>
                 <div class="text-center">
-                  <p class="text-gray-500 text-sm">Capacity</p>
-                  <p class="text-2xl font-bold text-gray-900">
+                  <p class="mb-1 text-sm text-gray-500">Capacity</p>
+                  <p class="mb-0 text-2xl font-bold text-gray-900">
                     {primaryChemInfo.capacity_typical || primaryChemInfo.capacity_range}
                     <span class="text-sm font-normal">{primaryChemInfo.capacity_unit || 'mAh'}</span>
                   </p>
                 </div>
                 <div class="text-center">
-                  <p class="text-gray-500 text-sm">Size</p>
-                  <p class="text-2xl font-bold text-gray-900">
+                  <p class="mb-1 text-sm text-gray-500">Size</p>
+                  <p class="mb-0 text-2xl font-bold text-gray-900">
                     {hasDimension(battery, 'diameter') ? `⌀${getDimension(battery, 'diameter')}` : `${getDimension(battery, 'width')}×${getDimension(battery, 'depth')}`}
                     <span class="text-sm font-normal">mm</span>
                   </p>
                 </div>
                 <div class="text-center">
-                  <p class="text-gray-500 text-sm">Height</p>
-                  <p class="text-2xl font-bold text-gray-900">
+                  <p class="mb-1 text-sm text-gray-500">Height</p>
+                  <p class="mb-0 text-2xl font-bold text-gray-900">
                     {getDimension(battery, 'height')}
                     <span class="text-sm font-normal">mm</span>
                   </p>
@@ -126,28 +126,28 @@ const description = `Complete technical specifications for ${battery.type} batte
             <div class="space-y-8">
               <!-- Chemistry Variants -->
               <section>
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Chemistry & Performance</h2>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Chemistry &amp; Performance</h2>
                 <div class="overflow-x-auto">
-                  <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50 font-semibold">
+                  <table class="min-w-full divide-y divide-gray-200 border border-gray-300 text-sm whitespace-nowrap text-gray-500">
+                    <thead class="font-semibold">
                       <tr>
-                        <th class="px-6 py-3 tracking-wider">Chemistry</th>
-                        <th class="px-6 py-3 tracking-wider">Voltage</th>
-                        <th class="px-6 py-3 tracking-wider">Capacity</th>
-                        <th class="px-6 py-3 tracking-wider">End Voltage</th>
+                        <th class="px-2 lg:px-6 py-3 tracking-wider">Chemistry</th>
+                        <th class="px-2 lg:px-6 py-3 tracking-wider">Voltage</th>
+                        <th class="px-2 lg:px-6 py-3 tracking-wider">Capacity</th>
+                        <th class="px-2 lg:px-6 py-3 tracking-wider">End Voltage</th>
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                       {Object.entries(battery.chemistry).map(([chemType, specs]) => (
                         <tr>
-                          <td class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900 uppercase">
+                          <td class="px-2 lg:px-6 py-4 font-medium text-gray-900 uppercase">
                             {chemType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                           </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{specs.voltage_nominal}V</td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <td class="px-2 lg:px-6 py-4">{specs.voltage_nominal}V</td>
+                          <td class="px-2 lg:px-6 py-4">
                             {specs.capacity_typical || specs.capacity_range} {specs.capacity_unit || 'mAh'}
                           </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{specs.voltage_end}V</td>
+                          <td class="px-2 lg:px-6 py-4">{specs.voltage_end}V</td>
                         </tr>
                       ))}
                     </tbody>
@@ -158,7 +158,7 @@ const description = `Complete technical specifications for ${battery.type} batte
               <!-- Physical Specifications -->
               <section>
                 <h2 class="text-2xl font-semibold text-gray-900 mb-4">Physical Specifications</h2>
-                <div class="bg-gray-50 p-6">
+                <div class="border border-gray-300 p-6">
                   <dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {hasDimension(battery, 'diameter') && (
                       <div>
@@ -198,15 +198,15 @@ const description = `Complete technical specifications for ${battery.type} batte
                   <h2 class="text-2xl font-semibold text-gray-900 mb-4">Standard Designations</h2>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {battery.iec_code && (
-                      <div class="bg-gray-50 p-4">
+                      <div class="border border-gray-300 p-4">
                         <h3 class="font-semibold text-gray-900">IEC Code</h3>
-                        <p class="text-lg text-gray-700">{battery.iec_code}</p>
+                        <p class="mb-0 text-lg text-gray-700">{battery.iec_code}</p>
                       </div>
                     )}
                     {battery.ansi_code && (
-                      <div class="bg-gray-50 p-4">
+                      <div class="border border-gray-300 p-4">
                         <h3 class="font-semibold text-gray-900">ANSI Code</h3>
-                        <p class="text-lg text-gray-700">{battery.ansi_code}</p>
+                        <p class="mb-0 text-lg text-gray-700">{battery.ansi_code}</p>
                       </div>
                     )}
                   </div>
@@ -220,9 +220,9 @@ const description = `Complete technical specifications for ${battery.type} batte
         <div class="lg:col-span-1">
           <div class="space-y-6">
             <!-- Common Uses -->
-            <div class="bg-gray-50 p-6">
+            <div class="border border-gray-300 bg-blue-50 p-6 pb-2">
               <h3 class="text-lg font-semibold text-gray-900 mb-4">Common Uses</h3>
-              <ul class="space-y-1 text-gray-700">
+              <ul class="space-y-1 text-gray-700 mb-4">
                 {battery.common_devices.map((device) => (
                   <li>{device}</li>
                 ))}
@@ -231,12 +231,12 @@ const description = `Complete technical specifications for ${battery.type} batte
 
             <!-- Temperature Range -->
             {battery.temperature_range && (
-              <div class="bg-gray-50 p-6">
+              <div class="border border-gray-300 bg-blue-50 p-6 pb-2">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Temperature Range</h3>
                 <div class="space-y-3">
                   {battery.temperature_range.operating && (
                     <div>
-                      <p class="text-sm text-gray-500">Operating</p>
+                      <p class="mb-1 text-sm text-gray-500">Operating</p>
                       <p class="text-lg text-gray-900">
                         {battery.temperature_range.operating.min}°C to {battery.temperature_range.operating.max}°C
                       </p>
@@ -244,7 +244,7 @@ const description = `Complete technical specifications for ${battery.type} batte
                   )}
                   {battery.temperature_range.operating_discharge && (
                     <div>
-                      <p class="text-sm text-gray-500">Operating (Discharge)</p>
+                      <p class="mb-1 text-sm text-gray-500">Operating (Discharge)</p>
                       <p class="text-lg text-gray-900">
                         {battery.temperature_range.operating_discharge.min}°C to {battery.temperature_range.operating_discharge.max}°C
                       </p>
@@ -252,7 +252,7 @@ const description = `Complete technical specifications for ${battery.type} batte
                   )}
                   {battery.temperature_range.operating_charge && (
                     <div>
-                      <p class="text-sm text-gray-500">Operating (Charge)</p>
+                      <p class="mb-1 text-sm text-gray-500">Operating (Charge)</p>
                       <p class="text-lg text-gray-900">
                         {battery.temperature_range.operating_charge.min}°C to {battery.temperature_range.operating_charge.max}°C
                       </p>
@@ -260,7 +260,7 @@ const description = `Complete technical specifications for ${battery.type} batte
                   )}
                   {battery.temperature_range.storage && (
                     <div>
-                      <p class="text-sm text-gray-500">Storage</p>
+                      <p class="mb-1 text-sm text-gray-500">Storage</p>
                       <p class="text-lg text-gray-900">
                         {battery.temperature_range.storage.min}°C to {battery.temperature_range.storage.max}°C
                       </p>
@@ -272,7 +272,7 @@ const description = `Complete technical specifications for ${battery.type} batte
 
             <!-- Data Sources -->
             {trustedSources.length > 0 && (
-              <div class="bg-gray-50 p-6">
+              <div class="border border-gray-300 bg-blue-50 p-6 pb-2">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Data Sources</h3>
                 <ul class="space-y-3 text-sm">
                   {trustedSources.map((source) => (

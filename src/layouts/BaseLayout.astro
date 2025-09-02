@@ -51,13 +51,13 @@ const {
 					</div>
 					
 					<!-- Desktop Navigation -->
-					<nav class="hidden md:flex gap-x-6" aria-label="Main navigation">
-						<a href="/traditional" class="text-gray-500 hover:underline" aria-label="Traditional batteries category">Traditional</a>
-						<a href="/lithium-ion" class="text-gray-500 hover:underline" aria-label="Lithium-ion batteries category">Lithium-ion</a>
-						<a href="/button-cells" class="text-gray-500 hover:underline" aria-label="Button cell batteries category">Button Cells</a>
-						<a href="/camera" class="text-gray-500 hover:underline" aria-label="Camera batteries category">Camera</a>
-						<a href="/hearing-aid" class="text-gray-500 hover:underline" aria-label="Hearing aid batteries category">Hearing Aid</a>
-						<a href="/search" class="text-gray-500 hover:underline" aria-label="Search battery database">Search</a>
+					<nav class="hidden gap-x-6 text-gray-800 md:flex" aria-label="Main navigation">
+						<a href="/traditional" class="hover:underline" aria-label="Traditional batteries category">Traditional</a>
+						<a href="/lithium-ion" class="hover:underline" aria-label="Lithium-ion batteries category">Lithium-ion</a>
+						<a href="/button-cells" class="hover:underline" aria-label="Button cell batteries category">Button Cells</a>
+						<a href="/camera" class="hover:underline" aria-label="Camera batteries category">Camera</a>
+						<a href="/hearing-aid" class="hover:underline" aria-label="Hearing aid batteries category">Hearing Aid</a>
+						<a href="/search" class="hover:underline" aria-label="Search battery database">Search</a>
 					</nav>
 
 					<!-- Mobile Menu Button -->
@@ -90,18 +90,13 @@ const {
 			</div>
 		</header>
 		
-		<main id="main" class="min-h-screen">
+		<main id="main" class="min-h-screen border-b border-gray-400">
 			<slot />
 		</main>
 		
-		<footer class="bg-white border-t border-gray-200">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
-				<div class="flex items-center justify-between text-gray-500 uppercase tracking-wider">
-						© {new Date().getFullYear()} batteries.guide
-					<a class="hover:underline" href="https://centricle.com">Built by centricle</a>
-					<a class="hover:underline" href="/about">About</a>
-				</div>
-			</div>
+		<footer class="mx-auto flex max-w-7xl items-center justify-between p-8 pb-6 tracking-wider text-gray-800 uppercase">
+			<a class="hover:underline" href="https://centricle.com">Built by centricle</a>
+			<a class="hover:underline" href="/about">About</a>
 		</footer>
 		
 		<script>
