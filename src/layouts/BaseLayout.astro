@@ -1,0 +1,174 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Batteries Guide - Complete Battery Database", 
+	description = "Comprehensive database of battery specifications, dimensions, and technical data for all consumer battery types."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:site_name" content="Batteries.Guide" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		
+		<!-- SEO -->
+		<link rel="canonical" href={Astro.url} />
+		<meta name="robots" content="index, follow" />
+	</head>
+
+	<body class="bg-gray-50 text-gray-900">
+		<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-900 text-white px-4 py-2 z-50">Skip to main content</a>
+		<header class="shadow-sm border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center py-6">
+					<div class="flex items-center">
+						<a href="/" class="text-2xl font-bold text-slate-800" aria-label="Batteries.Guide home page">
+							batteries.guide
+						</a>
+					</div>
+					
+					<!-- Desktop Navigation -->
+					<nav class="hidden md:flex gap-x-6" aria-label="Main navigation">
+						<a href="/traditional" class="text-gray-500 hover:underline" aria-label="Traditional batteries category">Traditional</a>
+						<a href="/lithium-ion" class="text-gray-500 hover:underline" aria-label="Lithium-ion batteries category">Lithium-ion</a>
+						<a href="/button-cells" class="text-gray-500 hover:underline" aria-label="Button cell batteries category">Button Cells</a>
+						<a href="/camera" class="text-gray-500 hover:underline" aria-label="Camera batteries category">Camera</a>
+						<a href="/hearing-aid" class="text-gray-500 hover:underline" aria-label="Hearing aid batteries category">Hearing Aid</a>
+						<a href="/search" class="text-gray-500 hover:underline" aria-label="Search battery database">Search</a>
+					</nav>
+
+					<!-- Mobile Menu Button -->
+					<button 
+						class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+						aria-label="Open navigation menu"
+						aria-expanded="false"
+						id="mobile-menu-button"
+					>
+						<svg class="w-6 h-6 hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+						<svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Mobile Navigation Menu -->
+				<div class="md:hidden hidden" id="mobile-menu">
+					<div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+						<a href="/traditional" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Traditional Batteries</a>
+						<a href="/lithium-ion" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Lithium-ion Batteries</a>
+						<a href="/button-cells" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Button Cell Batteries</a>
+						<a href="/camera" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Camera Batteries</a>
+						<a href="/hearing-aid" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Hearing Aid Batteries</a>
+						<a href="/search" class="block px-3 py-3 text-gray-700 hover:underline hover:bg-gray-50 text-base font-medium">Search Database</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main id="main" class="min-h-screen">
+			<slot />
+		</main>
+		
+		<footer class="bg-white border-t border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+				<div class="flex items-center justify-between text-gray-500 uppercase tracking-wider">
+						© {new Date().getFullYear()} batteries.guide
+					<a class="hover:underline" href="https://centricle.com">Built by centricle</a>
+					<a class="hover:underline" href="/about">About</a>
+				</div>
+			</div>
+		</footer>
+		
+		<script>
+			// Mobile menu toggle functionality
+			document.addEventListener('DOMContentLoaded', function() {
+				const button = document.getElementById('mobile-menu-button');
+				const menu = document.getElementById('mobile-menu');
+				
+				if (!button || !menu) return;
+				
+				const hamburgerIcon = button.querySelector('.hamburger-icon');
+				const closeIcon = button.querySelector('.close-icon');
+				let isOpen = false;
+				
+				function toggleMenu() {
+					isOpen = !isOpen;
+					
+					// Update menu visibility
+					menu.classList.toggle('hidden', !isOpen);
+					
+					// Update button state
+					button.setAttribute('aria-expanded', isOpen.toString());
+					button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+					
+					// Toggle icons
+					if (hamburgerIcon && closeIcon) {
+						hamburgerIcon.classList.toggle('hidden', isOpen);
+						closeIcon.classList.toggle('hidden', !isOpen);
+					}
+					
+					// Focus management
+					if (isOpen) {
+						const firstLink = menu.querySelector('a');
+						if (firstLink) firstLink.focus();
+					} else {
+						button.focus();
+					}
+				}
+				
+				function closeMenu() {
+					if (isOpen) toggleMenu();
+				}
+				
+				// Button click handler
+				button.addEventListener('click', toggleMenu);
+				
+				// Escape key handler
+				document.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape' && isOpen) {
+						closeMenu();
+					}
+				});
+				
+				// Click outside handler
+				document.addEventListener('click', function(event) {
+					if (isOpen && !menu.contains(event.target) && !button.contains(event.target)) {
+						closeMenu();
+					}
+				});
+				
+				// Close menu when clicking navigation links
+				menu.addEventListener('click', function(event) {
+					if (event.target.tagName === 'A') {
+						closeMenu();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

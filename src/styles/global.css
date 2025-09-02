@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-sans: sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-mono;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-wide text-blue-900;
+  }
+  
+  /* Selective uppercase for specific contexts */
+  .nav-header,
+  .category-header,
+  .spec-label,
+  nav a,
+  th {
+    @apply uppercase;
+  }
+  
+  h1 { @apply text-4xl font-bold leading-tight mb-4; letter-spacing: 0.05em; }
+  h2 { @apply text-2xl font-semibold leading-snug mb-3; letter-spacing: 0.04em; }
+  h3 { @apply text-xl font-medium leading-snug mb-2; letter-spacing: 0.03em; }
+  h4 { @apply text-lg font-medium mb-2; letter-spacing: 0.025em; }
+
+  p { @apply mb-4; }
+
+  ul { @apply list-disc pl-5; }
+
+  code, pre { @apply text-sm bg-gray-100 px-1; }
+
+  table { @apply w-full text-sm border-collapse; }
+  th { @apply text-left uppercase tracking-wide text-gray-700 pb-1; }
+  td { @apply border-b border-gray-300 py-1; }
+}
