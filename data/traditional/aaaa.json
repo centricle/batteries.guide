@@ -1,0 +1,86 @@
+{
+  "type": "AAAA",
+  "designation": "LR61",
+  "iec_code": "R61",
+  "ansi_code": "25A",
+  "alternate_codes": ["R8D425"],
+  "common_names": [
+    "AAAA",
+    "Quadruple A",
+    "LR61"
+  ],
+  "manufacturer_codes": {
+    "duracell": ["MN2500", "MX2500"],
+    "energizer": ["E96"]
+  },
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "400-600",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 8.3,
+    "height": 42.5,
+    "unit": "mm"
+  },
+  "weight": {
+    "alkaline": "6.5",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -18,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Microsoft Surface Pen",
+    "Stylus pens",
+    "Laser pointers",
+    "LED penlights",
+    "Glucose meters",
+    "Small headphone amplifiers",
+    "Digital calipers",
+    "Small electronic devices"
+  ],
+  "comparative_notes": {
+    "vs_aaa": "43% lighter, 40% smaller, 20% thinner than AAA battery"
+  },
+  "availability": "Less commonly available than AA/AAA batteries due to specialized use cases",
+  "notes": "Smallest common cylindrical battery. Primarily used in precision instruments and compact electronics. Not widely available in retail stores.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer Technical Data Library",
+      "url": "https://data.energizer.com/pdfs/e96.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Specifications",
+      "url": "https://www.duracell.com/en-us/techlibrary/battery-cross-reference-chart/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Wikipedia AAAA Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/AAAA_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

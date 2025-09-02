@@ -1,0 +1,81 @@
+{
+  "type": "AAA Lithium",
+  "designation": "L92",
+  "iec_code": "FR03",
+  "ansi_code": "24LF",
+  "common_names": [
+    "AAA Lithium",
+    "L92", 
+    "FR03",
+    "24LF",
+    "Ultimate Lithium AAA",
+    "Energizer Ultimate"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.8,
+      "voltage_end": 1.0,
+      "capacity_typical": "1250mAh",
+      "capacity_range": "1100-1250mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "1000mA",
+      "discharge_rate": "High",
+      "discharge_unit": "mA",
+      "self_discharge": "<1% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 10.5,
+    "height": 44.5,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "7.6"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -40,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Digital cameras",
+    "Wireless mice",
+    "Remote controls",
+    "Portable electronics",
+    "GPS devices",
+    "Emergency equipment",
+    "Cold weather gear"
+  ],
+  "shelf_life": {
+    "years": 20,
+    "notes": "Exceptional shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Contains lithium metal - dispose properly",
+    "Excellent performance in extreme temperatures",
+    "Not rechargeable"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic"
+  ],
+  "sources": [
+    {
+      "name": "Energizer L92 Ultimate Lithium Datasheet",
+      "url": "https://data.energizer.com/pdfs/l92.pdf",
+      "access_date": "2025-01-15"
+    }
+  ],
+  "notes": "Premium non-rechargeable AAA battery with superior cold weather performance and ultra-long shelf life. 33% lighter than alkaline with up to 9x longer life in digital cameras. Premium pricing but excellent for critical applications."
+}

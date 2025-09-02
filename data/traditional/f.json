@@ -1,0 +1,93 @@
+{
+  "type": "F",
+  "designation": "F",
+  "iec_code": "LR20",
+  "ansi_code": "13F",
+  "common_names": [
+    "F cell",
+    "LR20",
+    "13F",
+    "Super Heavy Duty"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.9,
+      "capacity_typical": "26000mAh",
+      "capacity_range": "24000-28000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "10000mA",
+      "discharge_rate": "Very High",
+      "discharge_unit": "mA",
+      "self_discharge": "2-3% per year"
+    },
+    "carbon_zinc": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.8,
+      "capacity_typical": "8000mAh",
+      "capacity_range": "6000-10000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "1000mA",
+      "discharge_rate": "Low to Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "4-8% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 33.0,
+    "height": 91.0,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "alkaline": "148",
+    "carbon_zinc": "120"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -18,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Large flashlights",
+    "Emergency lighting",
+    "Portable radios",
+    "Lanterns",
+    "Industrial equipment",
+    "Emergency beacons",
+    "Heavy-duty applications"
+  ],
+  "shelf_life": {
+    "years": 7,
+    "notes": "Alkaline version, carbon-zinc typically 2-3 years"
+  },
+  "safety_notes": [
+    "Large battery - disposal at proper recycling centers",
+    "Contains potassium hydroxide (alkaline) - corrosive if leaked"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Rayovac",
+    "Eveready"
+  ],
+  "sources": [
+    {
+      "name": "IEC 60086-2 Standard",
+      "url": "https://www.iec.ch/",
+      "access_date": "2025-01-15",
+      "notes": "International standard for primary batteries"
+    }
+  ],
+  "notes": "Largest common cylindrical primary battery. Rarely seen in consumer applications today but still used in specialized industrial and emergency equipment. Approximately twice the size of a D cell."
+}

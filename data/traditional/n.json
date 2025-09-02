@@ -1,0 +1,101 @@
+{
+  "type": "N",
+  "designation": "LR1",
+  "iec_code": "R1",
+  "ansi_code": "910A",
+  "ansi_zinc_carbon": "910D",
+  "alternate_codes": ["E90", "MN9100", "810", "LR01", "2011", "4001", "KN", "KN-2", "AM5", "UM5"],
+  "common_names": [
+    "N",
+    "N-size",
+    "LR1",
+    "Lady battery"
+  ],
+  "manufacturer_codes": {
+    "energizer": ["E90", "E90N"],
+    "duracell": ["MN9100"],
+    "panasonic": ["Lady LR1"]
+  },
+  "chemistry": {
+    "zinc_carbon": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "400-600",
+      "capacity_unit": "mAh"
+    },
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "1000",
+      "capacity_unit": "mAh"
+    },
+    "nicd": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "150-300",
+      "capacity_unit": "mAh",
+      "iec_designation": "KR1"
+    },
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "280-500",
+      "capacity_unit": "mAh",
+      "iec_designation": "HR1"
+    }
+  },
+  "dimensions": {
+    "diameter": 12.0,
+    "height": 30.2,
+    "unit": "mm"
+  },
+  "comparative_size": "Approximately three-fifths the length of an AA battery",
+  "weight": {
+    "alkaline": "7",
+    "nimh": "8-9",
+    "zinc_carbon": "5-6",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Car alarms",
+    "Garage door openers",
+    "Medical devices",
+    "Small electronics",
+    "Remote controls",
+    "Security devices",
+    "Calculators",
+    "Digital cameras"
+  ],
+  "notes": "Small cylindrical battery with multiple naming conventions. IEC designation R1 for zinc-carbon, LR1 for alkaline. Positive end has characteristic bump. Sometimes marketed as 'lady battery' by some manufacturers.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "ANSI C18 Battery Standards",
+      "date_accessed": "2025-01-09",
+      "type": "ansi_standard"
+    },
+    {
+      "name": "Wikipedia N Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/N_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

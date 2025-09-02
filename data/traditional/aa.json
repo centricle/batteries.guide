@@ -1,0 +1,129 @@
+{
+  "type": "AA",
+  "designation": "LR6",
+  "iec_code": "R6",
+  "ansi_code": "15A",
+  "common_names": ["AA", "Double A", "Mignon", "Penlight"],
+  "chemistry": {
+    "zinc_carbon": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "400-900",
+      "capacity_unit": "mAh"
+    },
+    "zinc_chloride": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "1000-1500",
+      "capacity_unit": "mAh"
+    },
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.8,
+      "capacity_typical": "1700-2850",
+      "capacity_at_25ma": "2850",
+      "capacity_at_500ma": "1000",
+      "capacity_unit": "mAh"
+    },
+    "lithium": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 1.0,
+      "capacity_typical": "3000-4000",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "2000",
+      "max_discharge_pulse": "3000",
+      "discharge_unit": "mA"
+    },
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "2000-2700",
+      "capacity_eneloop_standard": "2000",
+      "capacity_eneloop_pro": "2500",
+      "capacity_unit": "mAh",
+      "cycle_life": "500-2100"
+    }
+  },
+  "dimensions": {
+    "diameter_min": 13.7,
+    "diameter_max": 14.5,
+    "height_min": 49.5,
+    "height_max": 50.5,
+    "positive_terminal_min_height": 1.0,
+    "positive_terminal_max_diameter": 5.5,
+    "negative_terminal_min_diameter": 7.0,
+    "unit": "mm"
+  },
+  "weight": {
+    "alkaline": "23",
+    "lithium": "14.5",
+    "nimh": "27",
+    "zinc_carbon": "18",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 54,
+      "lithium_min": -40,
+      "lithium_max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "storage_retention": {
+    "alkaline_10_years": "80-93%",
+    "nimh_eneloop_10_years": "70%",
+    "nimh_eneloop_pro_1_year": "85%"
+  },
+  "common_devices": [
+    "Remote controls",
+    "Flashlights", 
+    "Digital cameras",
+    "Computer mice",
+    "Wireless keyboards",
+    "Toys",
+    "Portable radios",
+    "Electric toothbrushes",
+    "Wireless headphones",
+    "Gaming controllers"
+  ],
+  "notes": "Most common battery size worldwide. Standard cylindrical cell. IEC designation R6 for zinc-carbon, LR6 for alkaline, FR6 for lithium, KR6 for NiCd, HR6 for NiMH.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer Technical Data Library",
+      "url": "https://data.energizer.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Data Sheets",
+      "url": "https://www.duracell.com/en-us/techlibrary/product-technical-data-sheets/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic Eneloop Specifications",
+      "url": "https://www.panasonic.com/global/energy/products/eneloop/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Wikipedia AA Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/AA_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

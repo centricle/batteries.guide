@@ -1,0 +1,105 @@
+{
+  "type": "D",
+  "designation": "LR20",
+  "iec_code": "R20",
+  "ansi_code": "13A",
+  "alternate_codes": ["MN1300"],
+  "common_names": [
+    "D",
+    "D-cell",
+    "LR20",
+    "Size D"
+  ],
+  "chemistry": {
+    "zinc_carbon": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "4000-8000",
+      "capacity_unit": "mAh"
+    },
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "12000-20000",
+      "capacity_at_25ma": "20000",
+      "capacity_at_500ma": "10000",
+      "capacity_unit": "mAh"
+    },
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "2000-10000",
+      "capacity_high_capacity": "10000",
+      "capacity_unit": "mAh",
+      "cycle_life": "500-1000"
+    }
+  },
+  "dimensions": {
+    "diameter_min": 32.2,
+    "diameter_max": 34.2,
+    "height_min": 58.0,
+    "height_max": 61.5,
+    "unit": "mm"
+  },
+  "weight": {
+    "alkaline": "140-160",
+    "nimh": "160-180",
+    "zinc_carbon": "90-110",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "storage_retention": {
+    "alkaline_duracell": "up to 10 years storage life",
+    "alkaline_energizer": "5x longer lasting than standard zinc batteries"
+  },
+  "common_devices": [
+    "Large flashlights",
+    "Portable radios",
+    "Boom boxes",
+    "Emergency radios", 
+    "Large toys",
+    "Portable speakers",
+    "Megaphones",
+    "Lanterns",
+    "Power tools",
+    "High-drain electronics"
+  ],
+  "notes": "Largest common cylindrical battery. Highest capacity in standard battery sizes. IEC designation R20 for zinc-carbon, LR20 for alkaline. Used in high-power, high-drain applications.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer Technical Data Library",
+      "url": "https://data.energizer.com/pdfs/lr20ult_ceu.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Data Sheets",
+      "url": "https://www.duracell.com/en-us/techlibrary/product-technical-data-sheets/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Wikipedia D Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/D_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

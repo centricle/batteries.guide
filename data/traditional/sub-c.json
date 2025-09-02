@@ -1,0 +1,114 @@
+{
+  "type": "Sub-C",
+  "designation": "Sub-C",
+  "iec_code": "Sub-C",
+  "common_names": [
+    "Sub-C",
+    "SubC",
+    "SC",
+    "1/2AA"
+  ],
+  "chemistry": {
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_charged": 1.4,
+      "voltage_min": 1.0,
+      "capacity_typical": "3000mAh",
+      "capacity_range": "1800-4500mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "10C",
+      "discharge_rate": "High",
+      "discharge_unit": "C-rate",
+      "cycle_life": "500-1000 cycles"
+    },
+    "nicd": {
+      "voltage_nominal": 1.2,
+      "voltage_charged": 1.4,
+      "voltage_min": 1.0,
+      "capacity_typical": "2200mAh",
+      "capacity_range": "1200-3000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "15C",
+      "discharge_rate": "Very High",
+      "discharge_unit": "C-rate",
+      "cycle_life": "1000+ cycles"
+    }
+  },
+  "dimensions": {
+    "diameter": 23.0,
+    "height": 43.0,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "nimh": "67",
+    "nicd": "60"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 65,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 35,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Power tool battery packs",
+    "RC cars and planes",
+    "Emergency lighting",
+    "Backup power systems",
+    "Cordless phones",
+    "Two-way radios"
+  ],
+  "terminals": {
+    "flat_top": "Solder tabs for battery pack assembly",
+    "button_top": "Less common, for individual use"
+  },
+  "variants": {
+    "tagged": "With solder tabs for pack assembly",
+    "shrink_wrapped": "Individual cells with wrapper"
+  },
+  "safety_notes": [
+    "Contains potassium hydroxide - corrosive if leaked",
+    "Proper charging required to prevent overheating",
+    "NiCd contains cadmium - requires proper disposal"
+  ],
+  "manufacturers": [
+    "Sanyo",
+    "Panasonic", 
+    "Energizer",
+    "GP Batteries",
+    "Tenergy"
+  ],
+  "sources": [
+    {
+      "name": "Battery Equivalents - Sub-C Rechargeable Battery",
+      "url": "https://www.batteryequivalents.com/sub-c-rechargeable-battery.html",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Tenergy - Sub-C NiMH Battery Specifications",
+      "url": "https://power.tenergy.com/tenergy-propel-sub-c-3000mah-nimh-flat-top-rechargeable-battery/",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_reference"
+    },
+    {
+      "name": "Battery Space - Sub C Size NiMH Batteries",
+      "url": "https://www.batteryspace.com/subcsizeseriesbatteries.aspx",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "notes": "Cylindrical rechargeable cell larger than AA but smaller than C. Primarily used in battery pack construction for power tools and RC applications. Available with solder tabs for pack assembly."
+}

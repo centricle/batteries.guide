@@ -1,0 +1,116 @@
+{
+  "type": "AAA",
+  "designation": "LR03",
+  "iec_code": "R03",
+  "ansi_code": "24A",
+  "common_names": ["AAA", "Triple A", "Micro", "Micropenlight"],
+  "chemistry": {
+    "zinc_carbon": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "540",
+      "capacity_unit": "mAh"
+    },
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.65,
+      "voltage_end": 0.8,
+      "capacity_typical": "850-1200",
+      "capacity_premium": "1300-1500",
+      "capacity_unit": "mAh"
+    },
+    "lithium": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 1.0,
+      "capacity_typical": "1200",
+      "capacity_unit": "mAh"
+    },
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "800-1100",
+      "capacity_eneloop": "750-900",
+      "capacity_unit": "mAh",
+      "cycle_life": "500-1000"
+    }
+  },
+  "dimensions": {
+    "diameter": 10.5,
+    "height": 44.5,
+    "positive_terminal_max_diameter": 3.8,
+    "positive_terminal_min_height": 0.8,
+    "negative_terminal_min_diameter": 4.3,
+    "unit": "mm"
+  },
+  "weight": {
+    "alkaline": "11.5",
+    "lithium": "7.6",
+    "nimh": "14-15",
+    "zinc_carbon": "9.5",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": 0,
+      "max": 60,
+      "optimal_min": 20,
+      "optimal_max": 25,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "storage_retention": {
+    "alkaline_evolta_10_years": "stored for up to 10 years",
+    "duracell_coppertop_12_years": "guaranteed to last 12 years in storage",
+    "lithium_ultimate_20_years": "lasting 20 years"
+  },
+  "common_devices": [
+    "Remote controls",
+    "Small flashlights",
+    "Computer mice",
+    "Wireless headphones",
+    "Digital thermometers",
+    "Small toys",
+    "LED candles",
+    "Bluetooth earbuds",
+    "Portable fans",
+    "Small electronics"
+  ],
+  "notes": "Second most common battery size. Smaller version of AA with proportionally reduced capacity. IEC designation R03 for zinc-carbon, LR03 for alkaline. LR03 provides 3-5 times the capacity of R03.",
+  "sources": [
+    {
+      "name": "IEC 60086-2:2015 Primary batteries - Part 2: Physical and electrical specifications",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer Technical Data Library",
+      "url": "https://data.energizer.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Data Sheets",
+      "url": "https://www.duracell.com/en-us/techlibrary/product-technical-data-sheets/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic EVOLTA Battery Specifications",
+      "url": "https://www.panasonic.com/global/energy/products/battery/evolta_technologies.html",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Wikipedia AAA Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/AAA_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

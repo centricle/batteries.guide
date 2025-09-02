@@ -1,0 +1,140 @@
+{
+  "type": "12V-23A",
+  "designation": "A23/23A alkaline battery",
+  "iec_code": "8LR932",
+  "ansi_code": "1811A",
+  "common_names": ["23A", "A23", "MN21", "V23GA", "8LR23", "A23S", "23AE", "L1028"],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 12.0,
+      "voltage_end": 6.0,
+      "voltage_cutoff_range": "6.0-8.0",
+      "capacity_typical": "50-60",
+      "capacity_duracell": "60",
+      "capacity_unit": "mAh",
+      "construction": "Eight LR932 cells in series",
+      "self_discharge": "10% per year at 20°C"
+    }
+  },
+  "dimensions": {
+    "diameter_min": 10.0,
+    "diameter_max": 10.3,
+    "height_min": 28.2,
+    "height_max": 28.5,
+    "unit": "mm",
+    "shape": "cylindrical"
+  },
+  "weight": {
+    "typical": "8",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (button)",
+    "negative": "bottom (flat)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 5,
+      "max": 30,
+      "recommended_min": 5,
+      "recommended_max": 30,
+      "unit": "°C"
+    }
+  },
+  "discharge_characteristics": {
+    "continuous_current_typical": "0.5",
+    "continuous_current_max": "1.0",
+    "pulse_current_max": "15",
+    "pulse_current_range": "10-20",
+    "current_unit": "mA",
+    "test_load": "20kΩ at 21°C",
+    "voltage_stability": "Maintains >9.0V for 90% of discharge time"
+  },
+  "performance_data": {
+    "discharge_hours_to_8_8v": 92,
+    "discharge_hours_to_7_2v": 98,
+    "discharge_hours_to_6_0v": 100,
+    "test_conditions": "20kΩ load at 21°C"
+  },
+  "shelf_life": {
+    "years": 3,
+    "range": "3-5",
+    "premium_range": "up to 7",
+    "notes": "Some manufacturers claim up to 7 years shelf life"
+  },
+  "common_devices": [
+    "Car remote controls",
+    "Garage door openers",
+    "Security systems",
+    "Car alarms",
+    "Keyless entry systems",
+    "Dog training collars",
+    "Wireless doorbells",
+    "Small transmitters",
+    "LED flashlights",
+    "Medical devices"
+  ],
+  "manufacturers": [
+    "Energizer (A23)",
+    "Duracell (MN21)",
+    "Panasonic",
+    "GP Batteries",
+    "Varta",
+    "Rayovac",
+    "Maxell"
+  ],
+  "safety_notes": [
+    "Do not recharge",
+    "Do not disassemble - contains caustic electrolyte",
+    "Keep away from children - choking hazard",
+    "Do not short circuit",
+    "Store in cool, dry conditions",
+    "Dispose properly at battery recycling centers"
+  ],
+  "variants": {
+    "A23": "Standard ANSI designation",
+    "23A": "Alternative commercial designation", 
+    "MN21": "Duracell specific designation",
+    "V23GA": "Varta designation",
+    "8LR932": "IEC standard designation",
+    "8LR23": "Alternative IEC designation"
+  },
+  "notes": "Compact 12V power source consisting of eight LR932 alkaline cells connected in series. Despite small size, provides reliable high-voltage power for remote controls and security devices. Voltage remains relatively stable during discharge, making it suitable for devices requiring consistent 12V operation.",
+  "cross_references": {
+    "lr932_equivalent": "Contains eight LR932 cells internally",
+    "cr123a_comparison": "Higher voltage (12V vs 3V) but lower capacity",
+    "9v_comparison": "Higher voltage but much smaller physical size"
+  },
+  "sources": [
+    {
+      "name": "Battery Equivalents A23 Technical Reference",
+      "url": "https://www.batteryequivalents.com/a23-8lr932-1811a-v23ga-mn21-8lr23-a23s-battery-equivalents-and-replacements.html",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Energizer A23 Product Information",
+      "url": "https://data.energizer.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell MN21 Technical Specifications",
+      "url": "https://www.duracell.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086 Primary Battery Standards",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

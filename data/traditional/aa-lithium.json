@@ -1,0 +1,82 @@
+{
+  "type": "AA Lithium",
+  "designation": "L91",
+  "iec_code": "FR6",
+  "ansi_code": "15LF",
+  "common_names": [
+    "AA Lithium",
+    "L91",
+    "FR6",
+    "15LF",
+    "Ultimate Lithium",
+    "Energizer Ultimate"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.8,
+      "voltage_end": 1.0,
+      "capacity_typical": "3500mAh",
+      "capacity_range": "3000-3500mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "3000mA",
+      "discharge_rate": "Very High",
+      "discharge_unit": "mA",
+      "self_discharge": "<1% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 14.5,
+    "height": 50.5,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "15"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -40,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Digital cameras",
+    "GPS devices",
+    "Outdoor equipment",
+    "Emergency radios",
+    "High-drain electronics",
+    "Cold weather applications",
+    "Professional equipment"
+  ],
+  "shelf_life": {
+    "years": 20,
+    "notes": "Exceptional shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Contains lithium metal - dispose properly",
+    "Excellent performance in extreme temperatures",
+    "Not rechargeable"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic"
+  ],
+  "sources": [
+    {
+      "name": "Energizer L91 Ultimate Lithium Datasheet",
+      "url": "https://data.energizer.com/pdfs/l91.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Official manufacturer specifications"
+    }
+  ],
+  "notes": "Premium non-rechargeable AA battery offering superior performance in extreme temperatures and high-drain applications. Significantly lighter than alkaline with 7x longer life in digital cameras. Expensive but ideal for critical applications."
+}

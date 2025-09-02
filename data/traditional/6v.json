@@ -1,0 +1,132 @@
+{
+  "type": "6V",
+  "designation": "4LR44/PX28/A544",
+  "iec_code": "4LR44",
+  "common_names": ["6V battery", "4LR44", "PX28", "A544", "4G13", "28A", "K28A", "V34PX", "476A", "4A76"],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 6.0,
+      "voltage_end": 3.6,
+      "capacity_typical": "130-170",
+      "capacity_energizer": "178",
+      "capacity_gp": "100",
+      "capacity_unit": "mAh",
+      "construction": "Four LR44 cells in series"
+    },
+    "silver_oxide": {
+      "voltage_nominal": 6.2,
+      "voltage_end": 4.8,
+      "capacity_typical": "150-200",
+      "capacity_unit": "mAh",
+      "designation": "4SR44",
+      "construction": "Four SR44 cells in series"
+    }
+  },
+  "dimensions": {
+    "diameter": 13.0,
+    "height": 25.2,
+    "unit": "mm",
+    "shape": "cylindrical",
+    "notes": "Same form factor as four stacked LR44 batteries"
+  },
+  "weight": {
+    "alkaline": "10.0",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (flat or button)",
+    "negative": "bottom (flat)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "optimal": 20,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 5,
+      "max": 30,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 3,
+    "range": "3-5",
+    "notes": "Retains 85% capacity after 3 years at room temperature"
+  },
+  "discharge_characteristics": {
+    "continuous_current": "0.5",
+    "pulse_current_max": "15",
+    "current_unit": "mA",
+    "test_conditions": "20kΩ load at 21°C"
+  },
+  "common_devices": [
+    "Dog training collars",
+    "Car key fobs",
+    "Remote controls",
+    "Security systems",
+    "Film cameras",
+    "LED flashlights",
+    "Medical devices",
+    "Garage door remotes",
+    "Wireless doorbells",
+    "Electronic toys"
+  ],
+  "variants": {
+    "4LR44": "Alkaline version - most common",
+    "4SR44": "Silver oxide version - higher capacity and stable voltage",
+    "PX28": "Photo battery designation",
+    "A544": "ANSI standard designation",
+    "28A": "Alternative commercial designation"
+  },
+  "manufacturers": [
+    "Energizer (A544)",
+    "Duracell (PX28)",
+    "GP (476A)",
+    "Panasonic",
+    "Maxell",
+    "Varta",
+    "Rayovac"
+  ],
+  "safety_notes": [
+    "Do not disassemble - contains caustic electrolyte",
+    "Do not recharge alkaline versions",
+    "Keep away from children - choking hazard",
+    "Store in cool, dry conditions",
+    "Dispose properly at battery recycling centers"
+  ],
+  "notes": "Compact 6V power source created by stacking four LR44/SR44 cells in series. Despite small size, provides reliable power for electronic devices requiring 6V operation. Silver oxide versions offer more stable voltage discharge curve and higher capacity than alkaline.",
+  "cross_references": {
+    "lr44_equivalent": "Uses four LR44 (AG13) cells internally",
+    "cr123a_voltage": "Double the voltage of CR123A batteries",
+    "9v_comparison": "Smaller but lower capacity than 9V batteries"
+  },
+  "sources": [
+    {
+      "name": "Battery Equivalents 4LR44 Technical Reference",
+      "url": "https://www.batteryequivalents.com/4sr44-4lr44-px28a-a544-28a-k28a-battery-equivalents-and-replacements.html",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Energizer A544 Product Information",
+      "url": "https://data.energizer.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell PX28 Technical Specifications",
+      "url": "https://www.duracell.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086 Primary Battery Standards",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

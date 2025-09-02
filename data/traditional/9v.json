@@ -1,0 +1,102 @@
+{
+  "type": "9V",
+  "designation": "6LR61",
+  "iec_code": "6F22",
+  "ansi_code": "1604A",
+  "common_names": ["9V", "Nine volt", "PP3", "6LR61", "Smoke alarm battery"],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 9.0,
+      "voltage_end": 6.0,
+      "capacity_typical": "550-650",
+      "capacity_unit": "mAh"
+    },
+    "lithium": {
+      "voltage_nominal": 9.0,
+      "voltage_end": 6.5,
+      "capacity_typical": "1200-1300",
+      "capacity_unit": "mAh"
+    },
+    "nimh": {
+      "voltage_nominal": 8.4,
+      "voltage_end": 6.0,
+      "capacity_typical": "175-300",
+      "capacity_unit": "mAh"
+    },
+    "carbon_zinc": {
+      "voltage_nominal": 9.0,
+      "voltage_end": 5.4,
+      "capacity_typical": "400-500",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "width": 26.5,
+    "height": 48.5,
+    "depth": 17.5,
+    "unit": "mm",
+    "shape": "rectangular"
+  },
+  "weight": {
+    "alkaline": "45",
+    "lithium": "35",
+    "nimh": "50",
+    "carbon_zinc": "38",
+    "unit": "g"
+  },
+  "terminals": {
+    "type": "snap connector",
+    "positive": "smaller terminal",
+    "negative": "larger terminal",
+    "spacing": "12.7mm center-to-center"
+  },
+  "internal_construction": {
+    "alkaline": "6 × 1.5V AAAA cells in series",
+    "carbon_zinc": "6 × 1.5V cells in series",
+    "lithium": "Single lithium cell with voltage regulator",
+    "nimh": "7 × 1.2V cells in series"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -18,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Smoke detectors",
+    "Carbon monoxide detectors",
+    "Guitar effects pedals",
+    "Multimeters",
+    "Transistor radios",
+    "Remote controls (older)",
+    "Wall clocks",
+    "Wireless microphones"
+  ],
+  "notes": "Rectangular battery with distinctive snap terminals. Contains multiple smaller cells internally. Despite name, fresh voltage is typically 9.6V for alkaline. IEC designation 6F22 for carbon-zinc, 6LR61 for alkaline.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer 9V Technical Data Library",
+      "url": "https://data.energizer.com/pdfs/ind-6lr61pl_eu.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Data Sheets",
+      "url": "https://www.duracell.com/en-us/techlibrary/product-technical-data-sheets/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

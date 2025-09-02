@@ -1,0 +1,90 @@
+{
+  "type": "A",
+  "designation": "A",
+  "iec_code": "R23",
+  "ansi_code": "905",
+  "common_names": [
+    "A cell",
+    "R23",
+    "905",
+    "MN905"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.9,
+      "capacity_typical": "17000mAh",
+      "capacity_range": "15000-20000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "5000mA",
+      "discharge_rate": "High",
+      "discharge_unit": "mA",
+      "self_discharge": "2-3% per year"
+    },
+    "carbon_zinc": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.8,
+      "capacity_typical": "5000mAh",
+      "capacity_range": "3000-7000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "500mA",
+      "discharge_rate": "Low to Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "5-8% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 17.0,
+    "height": 50.0,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "alkaline": "31",
+    "carbon_zinc": "25"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -18,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Vintage electronics",
+    "Specialty industrial equipment",
+    "Emergency lighting",
+    "Older radio equipment",
+    "Replacement for older devices"
+  ],
+  "shelf_life": {
+    "years": 5,
+    "notes": "Alkaline version, carbon-zinc typically 2-3 years"
+  },
+  "safety_notes": [
+    "Contains potassium hydroxide (alkaline) - corrosive if leaked",
+    "Proper disposal at battery recycling centers"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Eveready",
+    "Rayovac"
+  ],
+  "sources": [
+    {
+      "name": "IEC 60086-2 Standard",
+      "url": "https://www.iec.ch/",
+      "access_date": "2025-01-15",
+      "notes": "International standard for primary batteries"
+    }
+  ],
+  "notes": "Obsolete battery size between AA and C. Rarely manufactured today but occasionally needed for vintage electronics and specialty applications. Similar diameter to AA but same height as C cell."
+}

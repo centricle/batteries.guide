@@ -1,0 +1,100 @@
+{
+  "type": "A23",
+  "designation": "12V alkaline battery",
+  "iec_code": "8LR932",
+  "ansi_code": "A23",
+  "common_names": ["A23", "8LR932", "V23GA", "LR23A", "MN21", "L1028", "E23A"],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 12.0,
+      "voltage_fresh": 12.0,
+      "voltage_end": 8.0,
+      "capacity_typical": "50-55",
+      "capacity_unit": "mAh",
+      "self_discharge": "3-5% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 10.3,
+    "height": 28.5,
+    "unit": "mm",
+    "shape": "cylindrical"
+  },
+  "weight": {
+    "typical": "8.0",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "raised button top",
+    "negative": "flat bottom",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -18,
+      "max": 55,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 5,
+    "notes": "Retains 80% capacity after 5 years at room temperature"
+  },
+  "common_devices": [
+    "Car key fobs",
+    "Garage door opener remotes",
+    "Car alarm remotes",
+    "Doorbell transmitters",
+    "Small RF transmitters",
+    "Wireless doorbells",
+    "Security system remotes",
+    "Gate openers",
+    "LED tea lights"
+  ],
+  "variants": {
+    "23A": "Same battery, alternative naming",
+    "MN21": "Duracell designation",
+    "V23GA": "Varta designation",
+    "E23A": "Energizer designation",
+    "GP23A": "GP Batteries designation"
+  },
+  "construction": {
+    "cells": 8,
+    "cell_voltage": "1.5V per cell",
+    "configuration": "8 x LR932 button cells in series"
+  },
+  "safety_notes": [
+    "Do not attempt to recharge",
+    "Keep away from children",
+    "Do not short circuit",
+    "Dispose properly at battery recycling centers",
+    "Do not crush or puncture"
+  ],
+  "notes": "Constructed from 8 small button cells (LR932) stacked in series to provide 12V output. Very common in small remote control devices due to compact size and high voltage. Low capacity limits use to intermittent, low-current applications.",
+  "sources": [
+    {
+      "name": "Energizer A23 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/a23.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell MN21 Technical Specifications",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/MN21_US_CT.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086-2 Standard - Primary batteries Part 2",
+      "url": "https://webstore.iec.ch/publication/694",
+      "date_accessed": "2025-09-01",
+      "type": "standard"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

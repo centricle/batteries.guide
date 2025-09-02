@@ -1,0 +1,98 @@
+{
+  "type": "C",
+  "designation": "LR14",
+  "iec_code": "R14",
+  "ansi_code": "14A",
+  "alternate_codes": ["MN1400", "PC1400", "ID1400"],
+  "common_names": [
+    "C",
+    "C-cell",
+    "LR14",
+    "Size C"
+  ],
+  "chemistry": {
+    "zinc_carbon": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "3000-4000",
+      "capacity_unit": "mAh"
+    },
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 0.8,
+      "capacity_typical": "7500-9000",
+      "capacity_duracell_industrial": "9038",
+      "capacity_duracell_plus": "8000",
+      "capacity_unit": "mAh"
+    },
+    "nimh": {
+      "voltage_nominal": 1.2,
+      "voltage_end": 1.0,
+      "capacity_typical": "2200-4500",
+      "capacity_duracell_rechargeable": "3000",
+      "capacity_unit": "mAh",
+      "cycle_life": "500-1000"
+    }
+  },
+  "dimensions": {
+    "diameter_max": 26.2,
+    "height_max": 50.0,
+    "unit": "mm"
+  },
+  "weight": {
+    "alkaline": "65-70",
+    "duracell_coppertop": "69",
+    "nimh": "75-85",
+    "zinc_carbon": "45-50",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 54,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Large flashlights",
+    "Portable radios",
+    "Boom boxes",
+    "Toys and games",
+    "Lanterns",
+    "Megaphones",
+    "Emergency equipment",
+    "Portable speakers"
+  ],
+  "notes": "Medium-sized cylindrical battery. Higher capacity than AA/AAA but larger size. IEC designation R14 for zinc-carbon, LR14 for alkaline. Common in medium-drain portable devices.",
+  "sources": [
+    {
+      "name": "IEC 60086 Primary Batteries Standard",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    },
+    {
+      "name": "Energizer Technical Data Library",
+      "url": "https://data.energizer.com/pdfs/lr14ult_ceu.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Technical Data Sheets",
+      "url": "https://www.duracell.com/en-us/techlibrary/product-technical-data-sheets/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Wikipedia C Battery Technical Reference",
+      "url": "https://en.wikipedia.org/wiki/C_battery",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}
