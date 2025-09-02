@@ -1,0 +1,27 @@
+---
+import { generateBatterySchematic, canGenerateSchematic } from '../utils/batterySchematic';
+
+export interface Props {
+  battery: any;
+}
+
+const { battery } = Astro.props;
+
+// Check if we can generate a schematic for this battery
+const canGenerate = canGenerateSchematic(battery);
+const schematicSvg = canGenerate ? generateBatterySchematic(battery) : null;
+---
+
+{canGenerate && schematicSvg && (
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Technical Drawing</h2>
+    <div class="bg-gray-50 p-6">
+      <div class="flex justify-center">
+        <Fragment set:html={schematicSvg} />
+      </div>
+      <p class="text-sm text-gray-600 mt-4 text-center">
+        Dimensions shown in {battery.dimensions.unit}. Drawing not to scale.
+      </p>
+    </div>
+  </section>
+)}
