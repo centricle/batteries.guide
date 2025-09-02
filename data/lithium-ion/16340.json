@@ -1,0 +1,158 @@
+{
+  "type": "16340",
+  "designation": "Lithium-ion rechargeable cylindrical cell",
+  "common_names": ["16340", "RCR123A", "CR123A rechargeable", "Li-ion 16340"],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_range": "500-1000",
+      "capacity_typical": "700-800",
+      "capacity_unit": "mAh",
+      "discharge_rate": "1C-15C",
+      "cycle_life": "300-500",
+      "premium_cycle_life": "up to 1200"
+    }
+  },
+  "dimensions": {
+    "diameter": 16.7,
+    "height": 34.1,
+    "diameter_tolerance": "±0.2",
+    "height_tolerance": "±0.2", 
+    "unit": "mm",
+    "notes": "16 = diameter in mm, 34 = height in mm, 0 = cylindrical"
+  },
+  "weight": {
+    "typical": "17-20",
+    "unit": "g"
+  },
+  "protection": {
+    "protected": "Built-in protection circuit (PCB) - recommended",
+    "unprotected": "No built-in protection - requires external BMS",
+    "bms_features": "Over-charge, over-discharge, over-current, short-circuit protection"
+  },
+  "terminals": {
+    "positive": "button top or flat top",
+    "negative": "flat bottom",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "charging_parameters": {
+    "max_voltage": 4.2,
+    "charging_current_max": "0.25-0.5",
+    "charging_current_typical": "0.5C",
+    "charging_method": "CC/CV (Constant Current/Constant Voltage)",
+    "current_unit": "A"
+  },
+  "discharge_parameters": {
+    "continuous_current_max": "2.5-10",
+    "pulse_current_max": "15",
+    "current_unit": "A",
+    "discharge_profile": "3C-15C depending on cell chemistry"
+  },
+  "manufacturers": [
+    "Orbtronic (920mAh protected)",
+    "KeepPower (800mAh protected)",
+    "Nitecore (NL169 950mAh)",
+    "EBL (750mAh)",
+    "Vapcell (T8 850mAh)",
+    "Olight",
+    "Fenix",
+    "SureFire"
+  ],
+  "common_devices": [
+    "High-performance flashlights",
+    "Tactical lights",
+    "Camera flashes",
+    "Laser pointers",
+    "LED lights",
+    "Some vape devices",
+    "Portable electronics",
+    "Security lights",
+    "Bike lights",
+    "Headlamps"
+  ],
+  "cr123a_compatibility": {
+    "voltage_difference": "3.7V (4.2V charged) vs 3.0V primary CR123A",
+    "size_difference": "Slightly smaller diameter (16.7mm vs 17mm)",
+    "compatibility_warning": "NOT directly interchangeable due to voltage difference",
+    "device_approval_required": "Only use if device explicitly supports 16340/RCR123A",
+    "risk": "Higher voltage may damage devices designed for 3V CR123A"
+  },
+  "safety_notes": [
+    "Never exceed 4.2V charging voltage",
+    "Do not discharge below 2.5V",
+    "Use appropriate li-ion charger with CC/CV profile",
+    "Avoid physical damage - can cause thermal runaway",
+    "Store at 40-60% charge for long term storage",
+    "Protected cells recommended for most applications",
+    "Do not use in devices designed only for 3V CR123A",
+    "Monitor temperature during charging and discharge"
+  ],
+  "chemistry_variants": {
+    "lco": "Lithium Cobalt Oxide - Higher energy density, requires more careful handling",
+    "lmo": "Lithium Manganese Oxide - Better thermal stability",
+    "nmc": "Lithium Nickel Manganese Cobalt - Balanced performance"
+  },
+  "performance_characteristics": {
+    "self_discharge": "Retains 75% capacity after 3 years storage",
+    "cycle_degradation": "Gradual capacity loss over 300-500 cycles",
+    "temperature_sensitivity": "Performance decreases in extreme temperatures",
+    "memory_effect": "None - can be charged at any state"
+  },
+  "storage_recommendations": {
+    "charge_level": "40-60% for long term storage",
+    "temperature": "Cool, dry environment",
+    "periodic_check": "Check voltage every 6 months",
+    "voltage_maintenance": "Recharge if voltage drops below 3.2V"
+  },
+  "notes": "Rechargeable lithium-ion equivalent to CR123A primary batteries, but with higher nominal voltage (3.7V vs 3.0V). Popular in high-drain devices like tactical flashlights. The '16340' designation comes from dimensions: 16mm diameter × 34mm height. Protected versions with built-in safety circuits are strongly recommended for consumer use.",
+  "cross_references": {
+    "cr123a_comparison": "Rechargeable version but higher voltage - not always compatible",
+    "18650_comparison": "Smaller capacity and size than 18650 batteries",
+    "14500_comparison": "Similar concept but different size (AA-sized vs CR123A-sized)"
+  },
+  "sources": [
+    {
+      "name": "Battery Equivalents 16340 Technical Guide",
+      "url": "https://www.batteryequivalents.com/16340-rechargeable-battery-and-its-equivalents-the-complete-guide.html",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Orbtronic 16340 Battery Specifications",
+      "url": "https://www.orbtronic.com/16340-battery-rechargeable-best-li-ion-rcr123",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Nitecore 16340 Battery Technical Data",
+      "url": "https://nitecorestore.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Li-ion Battery Safety Standards",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

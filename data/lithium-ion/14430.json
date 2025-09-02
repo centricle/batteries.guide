@@ -1,0 +1,118 @@
+{
+  "type": "14430",
+  "designation": "Lithium-ion cylindrical cell",
+  "common_names": ["14430", "Li-ion 14430", "14430 cell"],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_range": "600-900",
+      "capacity_unit": "mAh",
+      "discharge_rate": "1C-5C",
+      "cycle_life": "300-500"
+    }
+  },
+  "dimensions": {
+    "diameter": 14.0,
+    "height": 43.0,
+    "unit": "mm",
+    "notes": "14 = diameter in mm, 43 = height in mm, 0 = cylindrical"
+  },
+  "weight": {
+    "typical": "20-25",
+    "unit": "g"
+  },
+  "protection": {
+    "protected": "Built-in protection circuit (PCB) - adds ~2-3mm length",
+    "unprotected": "No built-in protection - requires external BMS",
+    "flat_top": "Positive terminal is flat",
+    "button_top": "Positive terminal has raised button"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "manufacturers": [
+    "Efest",
+    "UltraFire",
+    "TrustFire",
+    "Tenergy",
+    "Soshine",
+    "KeepPower"
+  ],
+  "common_devices": [
+    "Small LED flashlights",
+    "Electronic cigarettes",
+    "Compact vape devices",
+    "Portable electronics",
+    "Small power banks",
+    "LED work lights",
+    "Tactical pen lights",
+    "Small solar lights"
+  ],
+  "safety_notes": [
+    "Never exceed 4.2V charging voltage",
+    "Do not discharge below 2.5V",
+    "Use appropriate Li-ion charger with CC/CV profile",
+    "Avoid physical damage - can cause thermal runaway",
+    "Store at 40-60% charge for long term",
+    "Unprotected cells require external battery management",
+    "Smaller size increases heat concentration risk"
+  ],
+  "chemistry_variants": {
+    "lco": "Lithium Cobalt Oxide - Higher energy density, less stable",
+    "imr": "Lithium Manganese (safer chemistry) - Better thermal stability",
+    "icr": "Lithium Cobalt - Protected versions common"
+  },
+  "comparison_to_similar": {
+    "vs_14500": "13mm shorter, ~60-70% capacity, same diameter",
+    "vs_aa_nimh": "Higher voltage (3.7V vs 1.2V), similar diameter, shorter length",
+    "vs_16340": "Smaller diameter (14mm vs 16mm), similar capacity range"
+  },
+  "capacity_vs_discharge": {
+    "high_capacity": "800-900mAh - Lower discharge rate capability",
+    "high_drain": "600-700mAh - Higher discharge rate capability",
+    "notes": "Smaller size limits heat dissipation, affecting high-drain performance"
+  },
+  "market_notes": {
+    "availability": "Less common than 14500 or 18650 formats",
+    "applications": "Niche applications requiring compact size with moderate power",
+    "quality_variance": "Wide quality variation between manufacturers"
+  },
+  "notes": "Compact lithium-ion cell roughly 2/3 the length of a 14500 (AA-sized) battery. Popular in applications where space is extremely limited but AA batteries don't provide sufficient voltage. Less common than other formats, so availability and quality can vary significantly between manufacturers.",
+  "sources": [
+    {
+      "name": "Battery University - Small Lithium Ion Cells",
+      "url": "https://batteryuniversity.com/learn/article/lithium_based_batteries",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Efest 14430 IMR Battery Specifications",
+      "url": "https://www.efestpower.com/products/efest-imr-14430-650mah-button-top-battery",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "18650 Battery Store 14430 Guide",
+      "url": "https://www.18650batterystore.com/collections/14430-batteries",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

@@ -1,0 +1,113 @@
+{
+  "type": "32650",
+  "designation": "32650",
+  "common_names": [
+    "32650",
+    "3265",
+    "INR32650",
+    "IFR32650"
+  ],
+  "chemistry": {
+    "li_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_typical": "5000mAh",
+      "capacity_range": "4500-6000mAh", 
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "15A",
+      "max_discharge_pulse": "30A",
+      "discharge_rate": "High",
+      "discharge_unit": "A",
+      "cycle_life": "500-800 cycles"
+    },
+    "lifepo4": {
+      "voltage_nominal": 3.2,
+      "voltage_charged": 3.65,
+      "voltage_min": 2.0,
+      "capacity_typical": "5000mAh",
+      "capacity_range": "4500-6000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "10A",
+      "discharge_rate": "Moderate to High",
+      "discharge_unit": "A",
+      "cycle_life": "2000+ cycles"
+    }
+  },
+  "dimensions": {
+    "diameter": 32.0,
+    "height": 65.0,
+    "unit": "mm", 
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "li_ion": "120",
+    "lifepo4": "140"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Solar energy storage",
+    "Electric vehicles",
+    "UPS systems",
+    "Marine applications",
+    "RV power systems",
+    "High-capacity flashlights",
+    "Power tools"
+  ],
+  "protection": {
+    "pcb": "Usually unprotected - external BMS required",
+    "built_in": "Some variants have built-in protection"
+  },
+  "safety_notes": [
+    "Large capacity - requires proper BMS",
+    "High current capability",
+    "Do not short circuit",
+    "Do not overcharge",
+    "Store at 40-60% charge for long term"
+  ],
+  "manufacturers": [
+    "A123 Systems",
+    "CALB",
+    "Winston",
+    "Headway",
+    "K2 Energy"
+  ],
+  "sources": [
+    {
+      "name": "Battery University - Types of Battery Cells",
+      "url": "https://batteryuniversity.com/article/bu-301a-types-of-battery-cells",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Tritek Battery - Exploring Battery Cell Types",
+      "url": "https://tritekbattery.com/exploring-battery-cell-types/",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_reference"
+    },
+    {
+      "name": "Wikipedia - List of Battery Sizes",
+      "url": "https://en.wikipedia.org/wiki/List_of_battery_sizes",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    }
+  ],
+  "notes": "Large format cylindrical cell popular in energy storage applications. Available in both standard Li-ion and LiFePO4 chemistries. LiFePO4 versions offer longer cycle life and enhanced safety."
+}

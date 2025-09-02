@@ -1,0 +1,96 @@
+{
+  "type": "18350",
+  "designation": "18350",
+  "common_names": [
+    "18350",
+    "1835",
+    "INR18350"
+  ],
+  "chemistry": {
+    "li_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_typical": "900mAh",
+      "capacity_range": "700-1200mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "8A",
+      "max_discharge_pulse": "15A",
+      "discharge_rate": "High",
+      "discharge_unit": "A",
+      "cycle_life": "300-500 cycles"
+    }
+  },
+  "dimensions": {
+    "diameter": 18.0,
+    "height": 35.0,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "li_ion": "24"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Compact flashlights",
+    "Vaping devices",
+    "Tactical lights",
+    "Small electronics",
+    "Personal protection devices"
+  ],
+  "protection": {
+    "pcb": "Usually unprotected - external protection recommended",
+    "built_in": "Some variants have built-in protection"
+  },
+  "safety_notes": [
+    "High current capability despite small size",
+    "Requires proper charging system",
+    "Do not short circuit",
+    "Do not overcharge above 4.2V"
+  ],
+  "manufacturers": [
+    "Samsung",
+    "LG",
+    "Sony",
+    "Efest",
+    "AW"
+  ],
+  "sources": [
+    {
+      "name": "Wikipedia - 18650 Battery",
+      "url": "https://en.wikipedia.org/wiki/18650_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Battery University - Types of Battery Cells",
+      "url": "https://batteryuniversity.com/article/bu-301a-types-of-battery-cells",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "18650 Battery Store - Battery Information",
+      "url": "https://www.18650batterystore.com/pages/18650-battery-information",
+      "date_accessed": "2025-09-01",
+      "type": "specialty_retailer"
+    }
+  ],
+  "notes": "Compact lithium-ion cell, exactly half the length of an 18650. Popular in tactical flashlights and devices requiring high current in a small package."
+}

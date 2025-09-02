@@ -1,0 +1,99 @@
+{
+  "type": "20700",
+  "designation": "20700",
+  "common_names": [
+    "20700",
+    "2070",
+    "INR20700"
+  ],
+  "chemistry": {
+    "li_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_typical": "3000mAh",
+      "capacity_range": "2500-4000mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "30A",
+      "max_discharge_pulse": "60A",
+      "discharge_rate": "Very High",
+      "discharge_unit": "A",
+      "cycle_life": "300-500 cycles"
+    }
+  },
+  "dimensions": {
+    "diameter": 20.0,
+    "height": 70.0,
+    "unit": "mm",
+    "shape": "Cylindrical"
+  },
+  "weight": {
+    "unit": "g",
+    "li_ion": "65"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Electric vehicles (Tesla Model S/X)",
+    "Power tools",
+    "E-bikes",
+    "Energy storage systems",
+    "High-power flashlights",
+    "Vaping devices",
+    "Power banks"
+  ],
+  "protection": {
+    "pcb": "Usually unprotected - external BMS required",
+    "built_in": "Some variants have built-in protection"
+  },
+  "safety_notes": [
+    "Requires proper charging system with BMS",
+    "High current capability - handle with care",
+    "Do not short circuit",
+    "Do not overcharge above 4.2V",
+    "Store at 40-60% charge for long term"
+  ],
+  "manufacturers": [
+    "Samsung",
+    "LG Chem",
+    "Sony",
+    "Panasonic",
+    "Sanyo"
+  ],
+  "sources": [
+    {
+      "name": "Wikipedia - 18650 Battery",
+      "url": "https://en.wikipedia.org/wiki/18650_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Battery University - Types of Battery Cells",
+      "url": "https://batteryuniversity.com/article/bu-301a-types-of-battery-cells",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "UFine Battery - 20700 vs 21700 Battery Comparison",
+      "url": "https://www.ufinebattery.com/blog/6-battery-cell-types-comparison/",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_reference"
+    }
+  ],
+  "notes": "Larger capacity alternative to 18650 with higher current handling. Popularized by Tesla's use in Model S/X vehicles. Offers good balance of capacity and power density for high-drain applications."
+}

@@ -1,0 +1,65 @@
+{
+  "type": "26650",
+  "common_names": [
+    "26650"
+  ],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_range": "4000-5500",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 26,
+    "height": 65,
+    "unit": "mm"
+  },
+  "weight": {
+    "typical": "85-95",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "High-power flashlights",
+    "E-bikes",
+    "Power tools",
+    "Energy storage",
+    "Mod vapes"
+  ],
+  "notes": "Large format Li-ion with very high capacity and current capability. Name comes from dimensions: 26mm diameter × 65mm height. Higher capacity and current than 18650/21700.",
+  "sources": [
+    {
+      "name": "Wikipedia - 18650 Battery",
+      "url": "https://en.wikipedia.org/wiki/18650_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Battery University - Types of Battery Cells",
+      "url": "https://batteryuniversity.com/article/bu-301a-types-of-battery-cells",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "UFine Battery - 26650 Battery Specifications",
+      "url": "https://www.ufinebattery.com/blog/6-battery-cell-types-comparison/",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

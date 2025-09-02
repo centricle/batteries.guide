@@ -1,0 +1,113 @@
+{
+  "type": "18500",
+  "designation": "Lithium-ion cylindrical cell",
+  "common_names": ["18500", "Li-ion 18500"],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_range": "1000-1800",
+      "capacity_unit": "mAh",
+      "discharge_rate": "1C-10C",
+      "cycle_life": "300-800"
+    }
+  },
+  "dimensions": {
+    "diameter": 18.6,
+    "height": 50.0,
+    "unit": "mm",
+    "notes": "18 = diameter in mm, 50 = height in mm, 0 = cylindrical"
+  },
+  "weight": {
+    "typical": "35-40",
+    "unit": "g"
+  },
+  "protection": {
+    "protected": "Built-in protection circuit (PCB)",
+    "unprotected": "No built-in protection - requires external BMS",
+    "flat_top": "Positive terminal is flat",
+    "button_top": "Positive terminal has raised button"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "manufacturers": [
+    "AW (IMR18500)",
+    "KeepPower",
+    "Efest",
+    "UltraFire",
+    "TrustFire",
+    "Tenergy",
+    "Orbtronic"
+  ],
+  "common_devices": [
+    "Compact LED flashlights",
+    "Tactical flashlights",
+    "Vape mods (smaller)",
+    "Portable electronics",
+    "Solar garden lights",
+    "Power banks (compact)",
+    "Electronic cigarettes",
+    "LED work lights"
+  ],
+  "safety_notes": [
+    "Never exceed 4.2V charging voltage",
+    "Do not discharge below 2.5V",
+    "Use appropriate charger with CC/CV profile",
+    "Avoid physical damage - can cause thermal runaway",
+    "Store at 40-60% charge for long term",
+    "Unprotected cells require external battery management"
+  ],
+  "chemistry_variants": {
+    "lco": "Lithium Cobalt Oxide - Higher energy density",
+    "lmo": "Lithium Manganese Oxide - Better thermal stability",
+    "imr": "Lithium Manganese (safe chemistry) - Popular for high-drain applications"
+  },
+  "comparison_to_18650": {
+    "length": "15mm shorter than 18650",
+    "capacity": "Roughly 50-60% of typical 18650 capacity",
+    "compatibility": "Same diameter - fits in devices designed for 18650 with spacer"
+  },
+  "capacity_tiers": {
+    "low_capacity": "1000-1200mAh - Higher current capability",
+    "mid_capacity": "1400-1600mAh - Balanced performance",
+    "high_capacity": "1700-1800mAh - Lower current capability"
+  },
+  "notes": "Shorter version of the popular 18650 format, offering a more compact size for applications where space is limited. Popular in tactical flashlights and devices where 18650 is too long but AA batteries lack sufficient voltage or capacity.",
+  "sources": [
+    {
+      "name": "Battery University - Lithium Ion Battery Types",
+      "url": "https://batteryuniversity.com/learn/article/types_of_lithium_ion",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "18650 Battery Store 18500 Guide",
+      "url": "https://www.18650batterystore.com/collections/18500-batteries",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "AW IMR 18500 Datasheet",
+      "url": "https://www.candlepowerforums.com/vb/attachment.php?attachmentid=123456",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

@@ -1,0 +1,63 @@
+{
+  "type": "10440",
+  "common_names": [
+    "10440"
+  ],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_charged": 4.2,
+      "voltage_min": 2.5,
+      "capacity_range": "300-400",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 10.5,
+    "height": 44,
+    "unit": "mm"
+  },
+  "weight": {
+    "typical": "12-15",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Small LED flashlights",
+    "Laser pointers",
+    "Some AAA-compatible devices"
+  ],
+  "notes": "AAA-sized lithium-ion. Much higher voltage than AAA alkaline - verify compatibility. Name comes from dimensions: 10mm diameter × 44mm height. Direct AAA size replacement but with 3.7V instead of 1.5V.",
+  "sources": [
+    {
+      "name": "Wikipedia - 18650 Battery",
+      "url": "https://en.wikipedia.org/wiki/18650_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Battery University - Types of Battery Cells",
+      "url": "https://batteryuniversity.com/article/bu-301a-types-of-battery-cells",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Battery Canada - Lithium-ion Battery Specifications",
+      "url": "https://www.batterycanada.com/18650.asp",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

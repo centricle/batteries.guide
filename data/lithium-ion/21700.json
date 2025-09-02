@@ -1,0 +1,106 @@
+{
+  "type": "21700",
+  "designation": "Lithium-ion cylindrical cell",
+  "common_names": ["21700", "Li-ion 21700", "2170"],
+  "chemistry": {
+    "lithium_ion": {
+      "voltage_nominal": 3.7,
+      "voltage_nominal_alt": 3.6,
+      "voltage_charged": 4.2,
+      "voltage_min": 3.0,
+      "capacity_range": "3000-6000",
+      "capacity_unit": "mAh",
+      "discharge_rate": "1C-35C",
+      "cycle_life": "300-1500",
+      "energy_density": "250-300",
+      "energy_density_unit": "Wh/kg"
+    }
+  },
+  "dimensions": {
+    "diameter": 21.0,
+    "height": 70.0,
+    "unit": "mm",
+    "notes": "21 = diameter in mm, 70 = height in mm, 0 = cylindrical"
+  },
+  "weight": {
+    "typical": "65-75",
+    "samsung_50e": "75",
+    "unit": "g"
+  },
+  "manufacturers": [
+    "Samsung (40T, 50E, 53G)",
+    "LG (M50, LG50)",
+    "Panasonic (Tesla partnership)",
+    "Tesla/Panasonic (4680mAh-5000mAh)",
+    "Molicel (P42A, P45B)",
+    "Vapcell (F60 - 6000mAh)"
+  ],
+  "protection": {
+    "protected": "Built-in protection circuit (PCB)",
+    "unprotected": "No built-in protection - requires external BMS",
+    "flat_top": "Positive terminal is flat",
+    "button_top": "Positive terminal has raised button"
+  },
+  "temperature_range": {
+    "operating_charge": {
+      "min": 0,
+      "max": 45,
+      "unit": "°C"
+    },
+    "operating_discharge": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Tesla Model 3/Y",
+    "Electric vehicles",
+    "Power tools",
+    "E-bikes",
+    "High-capacity flashlights",
+    "Power banks",
+    "Energy storage systems",
+    "Vape mods",
+    "Laptops (newer models)"
+  ],
+  "performance_comparison": {
+    "vs_18650": "20% higher energy density, larger capacity, better heat dissipation",
+    "capacity_improvement": "Up to 50% more capacity than equivalent 18650"
+  },
+  "safety_notes": [
+    "Never exceed 4.2V charging voltage",
+    "Do not discharge below 3.0V",
+    "Use appropriate charger with CC/CV profile",
+    "Avoid physical damage - can cause thermal runaway",
+    "Store at 40-60% charge for long term",
+    "Higher current capability than 18650 but still requires proper BMS"
+  ],
+  "notes": "Successor to 18650 format with significantly higher capacity. Name comes from dimensions: 21mm diameter × 70mm height. Maximum commercial capacity as of 2024 is 6000mAh. Preferred format for Tesla and many EV manufacturers.",
+  "sources": [
+    {
+      "name": "18650 Battery Store 21700 Technical Guide",
+      "url": "https://www.18650batterystore.com/collections/21700-batteries",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Tesla 21700 Battery Technical Analysis",
+      "url": "https://www.dnkpower.com/teslas-mass-production-21700-battery/",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "21700 Battery Specifications Analysis",
+      "url": "https://www.large-battery.com/blog/understanding-21700-battery-specifications/",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}
