@@ -1,0 +1,80 @@
+{
+  "type": "CR1616",
+  "designation": "CR1616",
+  "iec_code": "CR1616",
+  "common_names": [
+    "CR1616",
+    "DL1616",
+    "ECR1616",
+    "BR1616"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 3.0,
+      "voltage_fresh": 3.3,
+      "voltage_end": 2.0,
+      "capacity_typical": "55mAh",
+      "capacity_range": "50-60mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "0.2mA",
+      "discharge_rate": "Low",
+      "discharge_unit": "mA",
+      "self_discharge": "<2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 16.0,
+    "height": 1.6,
+    "unit": "mm",
+    "shape": "Coin"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "0.7"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Car key fobs",
+    "Watches",
+    "Small electronics",
+    "Medical devices",
+    "Fitness trackers",
+    "Remote controls"
+  ],
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Swallowing hazard - keep away from children",
+    "Do not short circuit",
+    "Dispose properly at battery recycling centers"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic",
+    "Maxell",
+    "Varta"
+  ],
+  "sources": [
+    {
+      "name": "Energizer CR1616 Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr1616.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Official manufacturer specifications"
+    }
+  ],
+  "notes": "Ultra-thin lithium coin cell commonly used in key fobs and compact electronics. Very thin profile at only 1.6mm height."
+}

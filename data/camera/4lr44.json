@@ -1,0 +1,104 @@
+{
+  "type": "4LR44",
+  "designation": "4LR44",
+  "iec_code": "4LR44",
+  "ansi_code": "1414A",
+  "common_names": [
+    "4LR44",
+    "A544",
+    "PX28",
+    "L1325",
+    "1414A",
+    "4AG13",
+    "Dog collar battery"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 6.0,
+      "voltage_fresh": 6.4,
+      "voltage_end": 4.8,
+      "capacity_typical": "150mAh",
+      "capacity_range": "130-170mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "100mA",
+      "discharge_rate": "Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "2-3% per year"
+    },
+    "silver_oxide": {
+      "voltage_nominal": 6.15,
+      "voltage_fresh": 6.4,
+      "voltage_end": 5.4,
+      "capacity_typical": "180mAh",
+      "capacity_range": "170-200mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "150mA",
+      "discharge_rate": "Moderate to High",
+      "discharge_unit": "mA",
+      "self_discharge": "1-2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 13.0,
+    "height": 25.2,
+    "unit": "mm",
+    "shape": "Cylindrical",
+    "notes": "Four LR44/AG13 cells stacked in series"
+  },
+  "weight": {
+    "unit": "g",
+    "alkaline": "7.5",
+    "silver_oxide": "8.2"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 50,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Vintage cameras",
+    "Light meters",
+    "Camera accessories",
+    "Electronic dog collars",
+    "Remote controls",
+    "Medical devices",
+    "Security devices"
+  ],
+  "variants": {
+    "A544": "Silver oxide version with higher capacity",
+    "PX28": "Alternative designation",
+    "L1325": "Lithium version (less common)"
+  },
+  "shelf_life": {
+    "years": 3,
+    "notes": "Alkaline version, silver oxide may last 5+ years"
+  },
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Rayovac",
+    "Varta",
+    "Maxell"
+  ],
+  "sources": [
+    {
+      "name": "Energizer A544 Datasheet",
+      "url": "https://data.energizer.com/pdfs/a544.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Silver oxide version specifications"
+    },
+    {
+      "name": "Battery Equivalents 4LR44 Guide",
+      "url": "https://www.batteryequivalents.com/4lr44-a544-px28-batteries.html",
+      "access_date": "2025-01-15"
+    }
+  ],
+  "notes": "Compact 6V battery consisting of four LR44 cells in series. Common in vintage cameras and specialized electronic devices. Available in both alkaline and higher-performance silver oxide chemistries. Often called 'dog collar battery' due to popular use in pet training devices."
+}

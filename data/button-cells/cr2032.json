@@ -1,0 +1,93 @@
+{
+  "type": "CR2032",
+  "designation": "Lithium coin cell",
+  "iec_code": "CR2032",
+  "common_names": ["CR2032", "Coin cell", "CMOS battery", "Watch battery"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3.0,
+      "voltage_end": 2.0,
+      "capacity_typical": "210-240",
+      "capacity_unit": "mAh",
+      "self_discharge": "1% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 20,
+    "height": 3.2,
+    "unit": "mm",
+    "shape": "coin/disc",
+    "notes": "20 = diameter in mm, 32 = height in tenths of mm"
+  },
+  "weight": {
+    "typical": "3.1",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 85,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 100,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Retains 90% capacity after 10 years at room temperature"
+  },
+  "common_devices": [
+    "Computer motherboards (CMOS)",
+    "Car key fobs",
+    "Watches",
+    "Calculators",
+    "Garage door openers",
+    "Fitness trackers",
+    "LED candles",
+    "Digital calipers",
+    "Medical devices",
+    "IoT sensors"
+  ],
+  "variants": {
+    "CR2025": "Same diameter, 2.5mm thick, ~165mAh",
+    "CR2016": "Same diameter, 1.6mm thick, ~90mAh",
+    "DL2032": "Duracell equivalent designation",
+    "ECR2032": "Energizer equivalent designation"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Keep away from children - choking hazard",
+    "Do not crush or puncture",
+    "Dispose properly - contains lithium metal"
+  ],
+  "notes": "Most common coin cell battery. Excellent shelf life and temperature stability. Used in applications requiring long-term, low-current power. In microamp applications, can last over 10 years.",
+  "sources": [
+    {
+      "name": "Energizer CR2032 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr2032.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic CR2032 Technical Specifications",
+      "url": "http://www.cr2032.co/cms/prodimages/panasonic_cr2032_datasheet.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell CR2032 Datasheet",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/CR2032JCS0820.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

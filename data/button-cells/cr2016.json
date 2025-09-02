@@ -1,0 +1,63 @@
+{
+  "type": "CR2016",
+  "common_names": [
+    "CR2016"
+  ],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3,
+      "voltage_end": 2,
+      "capacity_typical": "90",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 20,
+    "height": 1.6,
+    "unit": "mm"
+  },
+  "weight": {
+    "typical": "1.8",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Watches",
+    "Calculators",
+    "Small electronics",
+    "Key fobs"
+  ],
+  "notes": "Thinnest variant of CR20xx series with lowest capacity. Same diameter (20mm) but only 1.6mm thick. Used in ultra-thin devices like slim watches.",
+  "sources": [
+    {
+      "name": "Wikipedia - Button Cell",
+      "url": "https://en.wikipedia.org/wiki/Button_cell",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Components101 - CR2032 and Button Cell Guide",
+      "url": "https://components101.com/batteries/cr2032-lithium-coin-cell-pinout-specs-equivalent-datasheet",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Microbattery - CR2025 vs CR2032 Comparison",
+      "url": "http://www.microbattery.com/blog/post/cr2025-vs-cr2032:-the-important-difference-between-cr2025-and-cr2032/",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

@@ -1,0 +1,91 @@
+{
+  "type": "2CR5",
+  "designation": "2CR5",
+  "iec_code": "6V lithium",
+  "ansi_code": "2CR5",
+  "common_names": [
+    "2CR5",
+    "EL2CR5",
+    "DL245",
+    "KL2CR5",
+    "Photo lithium"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 6.0,
+      "voltage_fresh": 6.4,
+      "voltage_end": 4.5,
+      "capacity_typical": "1400mAh",
+      "capacity_range": "1300-1500mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "1000mA",
+      "max_discharge_pulse": "2000mA",
+      "discharge_rate": "High",
+      "discharge_unit": "mA",
+      "self_discharge": "<2% per year"
+    }
+  },
+  "dimensions": {
+    "width": 34.0,
+    "height": 45.0,
+    "depth": 17.0,
+    "unit": "mm",
+    "shape": "Rectangular",
+    "notes": "Two CR123A cells in series configuration"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "39"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Film cameras",
+    "Digital cameras",
+    "Camera flash units",
+    "Professional photography equipment",
+    "Medical cameras",
+    "Security cameras"
+  ],
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Contains lithium metal - dispose properly",
+    "Do not short circuit",
+    "Do not disassemble or incinerate",
+    "Keep away from children"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic",
+    "Varta",
+    "Rayovac"
+  ],
+  "sources": [
+    {
+      "name": "Energizer 2CR5 Datasheet",
+      "url": "https://data.energizer.com/pdfs/2cr5.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Official manufacturer specifications"
+    },
+    {
+      "name": "Duracell Ultra Photo 2CR5",
+      "url": "https://www.duracell.com/en-us/products/batteries/specialty-batteries/ultra-photo-2cr5-lithium-camera-battery",
+      "access_date": "2025-01-15"
+    }
+  ],
+  "notes": "High-performance lithium battery designed for camera applications requiring 6V power. Essentially two CR123A cells in series in a single package. Excellent for high-drain camera applications including autofocus and flash charging."
+}

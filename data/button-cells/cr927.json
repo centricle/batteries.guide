@@ -1,0 +1,88 @@
+{
+  "type": "CR927",
+  "designation": "CR927",
+  "iec_code": "CR927",
+  "common_names": [
+    "CR927",
+    "DL927",
+    "ECR927"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 3.0,
+      "voltage_fresh": 3.3,
+      "voltage_end": 2.0,
+      "capacity_typical": "30mAh",
+      "capacity_range": "25-35mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "0.1mA",
+      "discharge_rate": "Very Low",
+      "discharge_unit": "mA",
+      "self_discharge": "<2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 9.5,
+    "height": 2.7,
+    "unit": "mm",
+    "shape": "Coin"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "0.6"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Small remote controls",
+    "Medical devices",
+    "Electronic toys",
+    "Small sensors",
+    "Backup power"
+  ],
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Small size - swallowing hazard for children",
+    "Keep in original packaging"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic",
+    "Maxell"
+  ],
+  "sources": [
+    {
+      "name": "Wikipedia - Button Cell",
+      "url": "https://en.wikipedia.org/wiki/Button_cell",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Components101 - CR2032 and Button Cell Guide",
+      "url": "https://components101.com/batteries/cr2032-lithium-coin-cell-pinout-specs-equivalent-datasheet",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Farnell - Lithium Battery Specifications",
+      "url": "https://www.farnell.com/datasheets/1496885.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_datasheet"
+    }
+  ],
+  "notes": "Compact lithium coin cell for low-power applications. Less common than CR2032 but used in specialized small electronics."
+}

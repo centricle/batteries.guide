@@ -1,0 +1,150 @@
+{
+  "type": "LR41",
+  "designation": "Alkaline button cell",
+  "iec_code": "LR736",
+  "common_names": ["LR41", "AG3", "192", "392A", "384", "92A", "GP192", "G3", "V3GA", "V36A"],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 1.0,
+      "capacity_typical": "25-32",
+      "capacity_range": "25-45",
+      "capacity_unit": "mAh",
+      "internal_resistance": "<15",
+      "resistance_unit": "Ω",
+      "self_discharge": "<5% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 7.9,
+    "height": 3.6,
+    "unit": "mm",
+    "shape": "button/coin",
+    "notes": "LR41 = 7.9mm diameter, 3.6mm height"
+  },
+  "weight": {
+    "typical": "0.6",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "optimal": 20,
+      "some_sources_min": 0,
+      "some_sources_max": 50,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 10,
+      "max": 25,
+      "optimal_min": 20,
+      "optimal_max": 25,
+      "unit": "°C"
+    }
+  },
+  "discharge_characteristics": {
+    "standard_current": "0.2",
+    "current_unit": "mA",
+    "discharge_profile": "Gradual voltage decline typical of alkaline chemistry"
+  },
+  "shelf_life": {
+    "years": 2,
+    "range": "2-3",
+    "premium_range": "up to 5",
+    "storage_conditions": "At 20-25°C",
+    "capacity_retention": "95% after 1 year"
+  },
+  "common_devices": [
+    "Digital thermometers",
+    "Small calculators",
+    "Watches (basic models)",
+    "Small LED flashlights",
+    "Laser pointers",
+    "Electronic toys",
+    "Pet collars",
+    "Small remote controls",
+    "Hearing aids (some models)",
+    "Medical devices"
+  ],
+  "manufacturers": [
+    "Duracell (392/384)",
+    "Maxell (LR41)",
+    "GP Batteries (GP192)",
+    "Camelion (AG3)",
+    "Tenergy (LR41/AG3)",
+    "Energizer (392/384 silver oxide equivalent)",
+    "Panasonic",
+    "Sony"
+  ],
+  "equivalents": {
+    "alkaline_equivalents": "LR736, AG3, 192, 92A, GP192",
+    "silver_oxide_replacement": "SR41 (1.55V, higher capacity, more stable voltage)",
+    "energizer_equivalent": "392/384 (silver oxide, not alkaline)",
+    "duracell_equivalent": "392/384 (silver oxide, not alkaline)"
+  },
+  "variants": {
+    "LR41": "Standard IEC designation for alkaline version",
+    "AG3": "Popular commercial designation",
+    "192": "ANSI designation",
+    "LR736": "Alternative IEC designation",
+    "SR41": "Silver oxide equivalent (1.55V, better performance)"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Keep away from children - choking hazard",
+    "Do not crush or puncture",
+    "Store in cool, dry conditions",
+    "Mercury-free composition",
+    "Dispose properly at battery recycling centers"
+  ],
+  "performance_characteristics": {
+    "voltage_profile": "Gradual decline from 1.5V to 1.0V",
+    "capacity_dependence": "Actual capacity depends on device cutoff voltage",
+    "temperature_sensitivity": "Capacity reduces in cold conditions",
+    "cost_advantage": "More economical than silver oxide equivalents"
+  },
+  "comparison_with_silver_oxide": {
+    "voltage_stability": "Less stable than SR41 silver oxide equivalent",
+    "capacity": "Lower capacity than SR41",
+    "cost": "More economical than silver oxide",
+    "applications": "Suitable for non-critical timing applications"
+  },
+  "notes": "Small alkaline button cell commonly used in digital thermometers and basic electronic devices. More economical than silver oxide equivalents but with less stable voltage output. The AG3 designation is widely recognized in consumer markets. Not recommended for precision timing applications where silver oxide SR41 would be superior.",
+  "cross_references": {
+    "sr41_comparison": "SR41 silver oxide provides 1.55V and better stability",
+    "lr44_comparison": "LR44 is larger (11.6×5.4mm) with higher capacity",
+    "cr2032_comparison": "CR2032 is much larger with 3V and 240mAh capacity"
+  },
+  "sources": [
+    {
+      "name": "Battery Equivalents LR41 Technical Reference",
+      "url": "https://www.batteryequivalents.com/lr41-battery-equivalent.html",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Duracell Button Cell Specifications",
+      "url": "https://www.duracell.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Maxell LR41 Product Information",
+      "url": "https://www.maxell.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086 Button Cell Battery Standards",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

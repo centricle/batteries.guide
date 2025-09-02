@@ -1,0 +1,111 @@
+{
+  "type": "AG3",
+  "designation": "LR736",
+  "iec_code": "LR736",
+  "ansi_code": "192",
+  "common_names": [
+    "AG3",
+    "LR736",
+    "192",
+    "392",
+    "SR736SW",
+    "LR41"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.9,
+      "capacity_typical": "42mAh",
+      "capacity_range": "35-50mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "2mA",
+      "discharge_rate": "Low",
+      "discharge_unit": "mA",
+      "self_discharge": "3-5% per year"
+    },
+    "silver_oxide": {
+      "voltage_nominal": 1.55,
+      "voltage_fresh": 1.6,
+      "voltage_end": 1.2,
+      "capacity_typical": "55mAh",
+      "capacity_range": "50-65mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "3mA",
+      "discharge_rate": "Low",
+      "discharge_unit": "mA",
+      "self_discharge": "1-2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 7.9,
+    "height": 3.6,
+    "unit": "mm",
+    "shape": "Button"
+  },
+  "weight": {
+    "unit": "g",
+    "alkaline": "0.5",
+    "silver_oxide": "0.6"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Watches",
+    "Small calculators",
+    "Digital thermometers",
+    "Small electronics",
+    "Keychain lights",
+    "Medical devices"
+  ],
+  "variants": {
+    "392": "Silver oxide version",
+    "SR736SW": "Silver oxide with stable voltage"
+  },
+  "shelf_life": {
+    "years": 3,
+    "notes": "Alkaline version, silver oxide may last 5+ years"
+  },
+  "safety_notes": [
+    "Small size - swallowing hazard for children",
+    "Keep in original packaging to prevent accidental ingestion"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Rayovac",
+    "Maxell",
+    "Renata"
+  ],
+  "sources": [
+    {
+      "name": "Wikipedia - Button Cell",
+      "url": "https://en.wikipedia.org/wiki/Button_cell",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Components101 - CR2032 and Button Cell Guide",
+      "url": "https://components101.com/batteries/cr2032-lithium-coin-cell-pinout-specs-equivalent-datasheet",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Microbattery - Button Cell Specifications",
+      "url": "https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-cr2032-battery/",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "notes": "Small button cell commonly used in watches and precision instruments. Available in both alkaline (AG3/LR736) and silver oxide (392/SR736SW) chemistries."
+}

@@ -1,0 +1,98 @@
+{
+  "type": "CR-P2",
+  "designation": "6V lithium camera battery",
+  "iec_code": "CR-P2",
+  "common_names": ["CR-P2", "CRP2", "Photo lithium", "6V photo battery"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 6.0,
+      "voltage_end": 4.0,
+      "capacity_typical": "1400-1500",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "1000",
+      "max_discharge_pulse": "2000", 
+      "discharge_unit": "mA",
+      "self_discharge": "1% per year"
+    }
+  },
+  "dimensions": {
+    "width": 35,
+    "depth": 19.5,
+    "height": 36,
+    "unit": "mm",
+    "shape": "rectangular",
+    "notes": "Distinctive rectangular camera battery pack"
+  },
+  "weight": {
+    "typical": "39",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "spring contact on one end",
+    "negative": "flat contact on opposite end", 
+    "type": "metal contacts on ends"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry. Retains 90% capacity after 10 years"
+  },
+  "common_devices": [
+    "Film cameras (35mm SLR)",
+    "Professional cameras",
+    "Camera flash units",
+    "Electronic flash strobes", 
+    "Vintage camera equipment",
+    "Photography accessories"
+  ],
+  "variants": {
+    "DL223A": "Duracell equivalent designation",
+    "EL223AP": "Energizer equivalent designation", 
+    "K223LA": "Kodak equivalent designation"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Do not crush or puncture", 
+    "Keep away from heat sources",
+    "Dispose properly - contains lithium metal",
+    "Do not short circuit terminals"
+  ],
+  "usage_notes": [
+    "Designed for high-drain camera applications",
+    "Excellent performance in cold weather",
+    "Stable voltage throughout discharge cycle",
+    "Ideal for electronic flash and motor drives"
+  ],
+  "notes": "Professional 6V lithium camera battery. Rectangular form factor designed specifically for camera applications. Excellent high-drain performance and cold weather operation. Essential for many vintage and professional film cameras requiring 6V power.",
+  "sources": [
+    {
+      "name": "Energizer CR-P2 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/crp2.pdf",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Camera Battery Technical Reference",
+      "date_accessed": "2025-01-09", 
+      "type": "technical_reference",
+      "notes": "Camera battery specifications and compatibility"
+    },
+    {
+      "name": "Lithium Battery Technology Overview",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

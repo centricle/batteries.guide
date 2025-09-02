@@ -1,0 +1,130 @@
+{
+  "type": "CR-V3",
+  "designation": "Lithium camera battery",
+  "iec_code": "CR-V3",
+  "common_names": ["CR-V3", "CRV3", "DLCRV3", "ELCRV3", "2CR5"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3.0,
+      "voltage_end": 2.0,
+      "capacity_typical": "3000-3300",
+      "capacity_unit": "mAh",
+      "self_discharge": "1-2% per year"
+    }
+  },
+  "dimensions": {
+    "length": 52.0,
+    "width": 14.0,
+    "height": 25.0,
+    "unit": "mm",
+    "shape": "rectangular block"
+  },
+  "weight": {
+    "typical": "39.0",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "raised contacts on one end",
+    "negative": "flat contacts on opposite end",
+    "type": "multi-contact metal terminals"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -55,
+      "max": 100,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Retains 90% capacity after 10 years at room temperature"
+  },
+  "common_devices": [
+    "Digital cameras",
+    "Film cameras",
+    "Camera flashes",
+    "Digital photo equipment",
+    "Some electronic devices",
+    "Professional camera equipment",
+    "Vintage digital cameras",
+    "Camera accessories"
+  ],
+  "variants": {
+    "DLCRV3": "Duracell designation",
+    "ELCRV3": "Energizer designation", 
+    "2CR5": "Similar form factor, different connector",
+    "KCRV3": "Kodak designation"
+  },
+  "current_capability": {
+    "continuous": "50-200",
+    "pulse": "1000-2000", 
+    "unit": "mA",
+    "notes": "Excellent pulse current capability for camera flash applications"
+  },
+  "construction": {
+    "cells": 2,
+    "cell_voltage": "1.5V per cell",
+    "configuration": "2 lithium cells in series",
+    "equivalent": "Roughly equivalent to 4 AA batteries in terms of capacity"
+  },
+  "form_factor": {
+    "unique_shape": "Rectangular block with proprietary connector",
+    "camera_specific": "Designed specifically for camera battery compartments",
+    "space_efficient": "High capacity in compact camera-friendly format"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Do not short circuit terminals",
+    "Avoid extreme temperatures during high-drain use",
+    "Dispose properly - contains lithium metal",
+    "High current capability - handle connections carefully"
+  ],
+  "performance_characteristics": {
+    "voltage_stability": "Excellent - maintains 3V throughout most of discharge",
+    "temperature_performance": "Superior performance in cold conditions vs alkaline",
+    "shelf_life": "10+ years with minimal capacity loss",
+    "flash_capability": "Optimized for camera flash high-current pulses"
+  },
+  "replacement_options": {
+    "rechargeable_equivalent": "Some cameras accept rechargeable Li-ion packs in same form factor",
+    "aa_adapter": "Some cameras can use AA battery adapters instead",
+    "notes": "Check camera manual for compatibility with alternatives"
+  },
+  "market_status": {
+    "availability": "Less common as digital cameras evolved to use proprietary Li-ion packs",
+    "legacy_support": "Still manufactured for older camera models",
+    "cost": "Premium pricing due to specialized nature"
+  },
+  "comparison_to_alternatives": {
+    "vs_4xaa": "Same voltage, higher capacity, much more compact",
+    "vs_cr123a": "Higher capacity, different form factor, camera-optimized",
+    "vs_proprietary_lion": "Non-rechargeable, longer shelf life, wider temperature range"
+  },
+  "notes": "Specialized battery format designed for digital cameras requiring high capacity and pulse current capability. The rectangular form factor maximizes capacity while fitting camera battery compartments. Largely superseded by proprietary Li-ion packs but still used in some camera models.",
+  "sources": [
+    {
+      "name": "Energizer CR-V3 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/crv3.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Ultra CR-V3 Specifications",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/CRV3_US_CT.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic CR-V3 Camera Battery Datasheet",
+      "url": "https://na.industrial.panasonic.com/sites/default/pidsa/files/downloads/files/crv3_series.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

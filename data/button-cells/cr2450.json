@@ -1,0 +1,105 @@
+{
+  "type": "CR2450",
+  "designation": "Lithium coin cell",
+  "iec_code": "CR2450",
+  "common_names": ["CR2450", "Coin cell", "CMOS battery", "High capacity coin cell"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3.0,
+      "voltage_end": 2.0,
+      "capacity_typical": "600-620",
+      "capacity_unit": "mAh",
+      "self_discharge": "1% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 24.5,
+    "height": 5.0,
+    "unit": "mm",
+    "shape": "coin/disc",
+    "notes": "24 = diameter in mm, 50 = height in tenths of mm"
+  },
+  "weight": {
+    "typical": "6.8",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 85,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 100,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Retains 90% capacity after 10 years at room temperature"
+  },
+  "common_devices": [
+    "Computer motherboards (CMOS)",
+    "Car key fobs with LCD displays",
+    "Medical devices",
+    "Electronic scales",
+    "Digital calipers",
+    "Glucose meters",
+    "Blood pressure monitors",
+    "Backup power for real-time clocks",
+    "Wireless sensors",
+    "Memory backup applications"
+  ],
+  "variants": {
+    "CR2430": "Same diameter, 3.0mm thick, ~270mAh",
+    "CR2354": "23mm diameter, 5.4mm thick, ~560mAh",
+    "DL2450": "Duracell equivalent designation",
+    "ECR2450": "Energizer equivalent designation",
+    "KCR2450": "Kodak designation"
+  },
+  "comparison_to_common": {
+    "vs_cr2032": "25% larger diameter, 56% thicker, ~2.8x capacity",
+    "vs_cr2025": "25% larger diameter, 2x thicker, ~3.7x capacity"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Keep away from children - choking hazard",
+    "Do not crush or puncture",
+    "Dispose properly - contains lithium metal",
+    "Larger size increases choking risk compared to smaller coin cells"
+  ],
+  "current_capability": {
+    "continuous": "0.2-1.0",
+    "pulse": "15",
+    "unit": "mA",
+    "notes": "Higher current capability than smaller coin cells due to larger surface area"
+  },
+  "notes": "High-capacity coin cell designed for applications requiring longer runtime or higher current draw than standard CR2032. The larger size provides approximately 3x the capacity of CR2032. Popular in devices with LCD displays or periodic high-current pulses.",
+  "sources": [
+    {
+      "name": "Energizer CR2450 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr2450.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic CR2450 Technical Specifications",
+      "url": "https://na.industrial.panasonic.com/sites/default/pidsa/files/downloads/files/cr2450_series.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell CR2450 Datasheet",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/CR2450JCS0820.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

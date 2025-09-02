@@ -1,0 +1,80 @@
+{
+  "type": "CR2430",
+  "designation": "CR2430",
+  "iec_code": "CR2430",
+  "common_names": [
+    "CR2430",
+    "DL2430",
+    "ECR2430",
+    "BR2430"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 3.0,
+      "voltage_fresh": 3.3,
+      "voltage_end": 2.0,
+      "capacity_typical": "290mAh",
+      "capacity_range": "270-320mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "3mA",
+      "discharge_rate": "Low to Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "<2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 24.5,
+    "height": 3.0,
+    "unit": "mm",
+    "shape": "Coin"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "4.1"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Car key fobs",
+    "Garage door remotes",
+    "Tire pressure monitors",
+    "Wireless sensors",
+    "Medical devices",
+    "Backup power for electronics"
+  ],
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Swallowing hazard - keep away from children",
+    "Do not short circuit",
+    "Dispose properly at battery recycling centers"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic",
+    "Maxell",
+    "Varta"
+  ],
+  "sources": [
+    {
+      "name": "Energizer CR2430 Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr2430.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Official manufacturer specifications"
+    }
+  ],
+  "notes": "Medium-capacity lithium coin cell with good current handling for automotive and wireless applications. Popular in key fobs and remote controls."
+}

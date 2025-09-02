@@ -1,0 +1,93 @@
+{
+  "type": "13",
+  "designation": "A13",
+  "iec_code": "PR48",
+  "common_names": ["13", "A13", "PR48", "Size 13"],
+  "chemistry": {
+    "zinc_air": {
+      "voltage_nominal": 1.45,
+      "voltage_end": 1.1,
+      "capacity_typical": "280-310",
+      "capacity_unit": "mAh",
+      "self_discharge": "Activated by air exposure",
+      "discharge_rate": "Medium current optimized"
+    }
+  },
+  "dimensions": {
+    "diameter": 7.9,
+    "height": 5.4,
+    "unit": "mm",
+    "shape": "button/disc",
+    "notes": "Standard size hearing aid battery, taller than 312"
+  },
+  "weight": {
+    "typical": "0.83",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top surface (flat)",
+    "negative": "bottom surface",
+    "type": "metal contact with air holes"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": 0,
+      "max": 40,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 10,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 4,
+    "notes": "Sealed tab prevents air activation. Once tab removed, battery must be used within days"
+  },
+  "color_code": "Orange",
+  "common_devices": [
+    "Behind-the-ear (BTE) hearing aids",
+    "Receiver-in-canal (RIC) hearing aids", 
+    "Power hearing aids",
+    "Cochlear implant processors"
+  ],
+  "variants": {
+    "rechargeable_options": "Silver-zinc and lithium-ion rechargeable versions widely available"
+  },
+  "safety_notes": [
+    "Keep away from children - choking hazard",
+    "Do not remove tab until ready to use",
+    "Air-activated chemistry - seal air holes to extend life",
+    "Do not store in refrigerator",
+    "Replace when hearing aid beeps or sounds distorted"
+  ],
+  "usage_notes": [
+    "Wait 1-2 minutes after removing tab before inserting",
+    "Allows air to fully activate the battery",
+    "Typical lifespan: 10-14 days depending on usage",
+    "Most common hearing aid battery size"
+  ],
+  "notes": "Most popular hearing aid battery size. Zinc-air chemistry provides stable voltage and high energy density. Air-activated system requires removal of sealing tab. Color-coded orange for easy identification. Excellent balance of size, capacity, and runtime.",
+  "sources": [
+    {
+      "name": "Battery Equivalents - Hearing Aid Batteries Guide",
+      "url": "https://www.batteryequivalents.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Wikipedia - Zinc-Air Battery",
+      "url": "https://en.wikipedia.org/wiki/Zinc–air_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Microbattery - Size 13 Hearing Aid Batteries",
+      "url": "https://www.microbattery.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

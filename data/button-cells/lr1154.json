@@ -1,0 +1,104 @@
+{
+  "type": "LR1154",
+  "designation": "LR1154",
+  "iec_code": "LR1154",
+  "ansi_code": "189",
+  "common_names": [
+    "LR1154",
+    "AG13",
+    "LR44",
+    "A76",
+    "357",
+    "303",
+    "SR44"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.6,
+      "voltage_end": 0.9,
+      "capacity_typical": "110mAh",
+      "capacity_range": "100-150mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "15mA",
+      "discharge_rate": "Low to Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "2-3% per year"
+    },
+    "silver_oxide": {
+      "voltage_nominal": 1.55,
+      "voltage_fresh": 1.6,
+      "voltage_end": 1.2,
+      "capacity_typical": "165mAh",
+      "capacity_range": "150-180mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "25mA",
+      "discharge_rate": "Moderate",
+      "discharge_unit": "mA",
+      "self_discharge": "1-2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 11.6,
+    "height": 5.4,
+    "unit": "mm",
+    "shape": "Button"
+  },
+  "weight": {
+    "unit": "g",
+    "alkaline": "2.0",
+    "silver_oxide": "2.3"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Laser pointers",
+    "Small toys",
+    "LED lights",
+    "Remote controls",
+    "Calculators",
+    "Digital thermometers",
+    "Pet collars",
+    "Small electronics"
+  ],
+  "variants": {
+    "AG13": "Common generic designation",
+    "A76": "Duracell designation",
+    "357": "Silver oxide version",
+    "303": "Silver oxide alternative"
+  },
+  "shelf_life": {
+    "years": 3,
+    "notes": "Alkaline version, silver oxide may last 5+ years"
+  },
+  "safety_notes": [
+    "Swallowing hazard - keep away from children",
+    "Contains potassium hydroxide (alkaline) - avoid contact with eyes/skin"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell", 
+    "Rayovac",
+    "Maxell",
+    "Panasonic"
+  ],
+  "sources": [
+    {
+      "name": "Energizer LR44 Datasheet",
+      "url": "https://data.energizer.com/pdfs/lr44.pdf", 
+      "access_date": "2025-01-15",
+      "notes": "LR44 and LR1154 are equivalent"
+    }
+  ],
+  "notes": "One of the most confusing battery types due to multiple equivalent designations. LR1154, LR44, and AG13 are all the same alkaline battery. Silver oxide versions (357, 303, SR44) offer better performance but cost more."
+}

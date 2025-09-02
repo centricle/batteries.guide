@@ -1,0 +1,136 @@
+{
+  "type": "SR44",
+  "designation": "Silver oxide button battery",
+  "iec_code": "SR44",
+  "ansi_code": "S76",
+  "common_names": ["SR44", "S76", "AG13", "LR44", "V13GA", "A76", "357", "303"],
+  "chemistry": {
+    "silver_oxide": {
+      "voltage_nominal": 1.55,
+      "voltage_fresh": 1.55,
+      "voltage_end": 1.2,
+      "capacity_typical": "150-165",
+      "capacity_unit": "mAh",
+      "self_discharge": "3-5% per year"
+    },
+    "alkaline_equivalent": {
+      "voltage_nominal": 1.5,
+      "voltage_fresh": 1.5,
+      "voltage_end": 1.0,
+      "capacity_typical": "110-130",
+      "capacity_unit": "mAh",
+      "designation": "LR44/AG13"
+    }
+  },
+  "dimensions": {
+    "diameter": 11.6,
+    "height": 5.4,
+    "unit": "mm",
+    "shape": "button/disc"
+  },
+  "weight": {
+    "typical": "2.3",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 3,
+    "notes": "Silver oxide chemistry provides stable voltage throughout discharge"
+  },
+  "common_devices": [
+    "Watches",
+    "Calculators", 
+    "Small electronics",
+    "Medical devices",
+    "Digital thermometers",
+    "Laser pointers",
+    "Electronic toys",
+    "Hearing aids",
+    "Digital calipers",
+    "LED lights"
+  ],
+  "variants": {
+    "LR44": "Alkaline equivalent - lower capacity, less stable voltage",
+    "AG13": "Generic alkaline equivalent",
+    "A76": "Duracell alkaline equivalent",
+    "357": "Silver oxide equivalent designation",
+    "303": "Silver oxide equivalent designation",
+    "V13GA": "Varta designation",
+    "S76": "ANSI designation for silver oxide version"
+  },
+  "chemistry_comparison": {
+    "silver_oxide_advantages": [
+      "Higher voltage (1.55V vs 1.5V)",
+      "More stable voltage throughout discharge",
+      "Higher capacity (~150mAh vs ~110mAh)",
+      "Better performance in precision devices"
+    ],
+    "alkaline_advantages": [
+      "Lower cost",
+      "Wider availability",
+      "Adequate for non-precision applications"
+    ]
+  },
+  "voltage_profile": {
+    "silver_oxide": "Flat discharge curve - maintains 1.55V until nearly depleted",
+    "alkaline": "Declining curve - voltage drops gradually from 1.5V to 1.0V"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Keep away from children - choking hazard",
+    "Do not short circuit",
+    "Dispose properly at battery recycling centers",
+    "Silver oxide versions contain mercury in some formulations"
+  ],
+  "application_guidance": {
+    "use_silver_oxide_for": [
+      "Precision instruments",
+      "Watches requiring accurate timekeeping",
+      "Medical devices",
+      "Applications requiring stable voltage"
+    ],
+    "use_alkaline_for": [
+      "Toys and non-precision devices",
+      "Applications where cost is primary concern",
+      "Devices with wide voltage tolerance"
+    ]
+  },
+  "notes": "One of the most common button battery sizes with both silver oxide (SR44) and alkaline (LR44) chemistry options. Silver oxide provides superior performance with stable voltage and higher capacity, while alkaline offers lower cost. The flat voltage profile of silver oxide makes it preferred for precision devices.",
+  "sources": [
+    {
+      "name": "Energizer 357/303 Silver Oxide Datasheet",
+      "url": "https://data.energizer.com/pdfs/357-303.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell 76A Silver Oxide Battery Specifications",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/D76AJC0820.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086-3 Standard - Watch batteries",
+      "url": "https://webstore.iec.ch/publication/695",
+      "date_accessed": "2025-09-01",
+      "type": "standard"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

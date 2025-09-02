@@ -1,0 +1,115 @@
+{
+  "type": "CR2",
+  "designation": "Lithium photography battery",
+  "iec_code": "CR15H270",
+  "common_names": ["CR2", "DLCR2", "EL1CR2", "CR15H270", "5046LC"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3.0,
+      "voltage_end": 2.0,
+      "capacity_typical": "800-850",
+      "capacity_unit": "mAh",
+      "self_discharge": "1-2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 15.6,
+    "height": 27.0,
+    "unit": "mm",
+    "shape": "cylindrical"
+  },
+  "weight": {
+    "typical": "11.0",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "raised button top",
+    "negative": "flat bottom with contact ring",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -55,
+      "max": 100,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Retains 90% capacity after 10 years at room temperature"
+  },
+  "common_devices": [
+    "Film cameras",
+    "Digital cameras",
+    "Camera flashes",
+    "Flashlights",
+    "Laser rangefinders",
+    "Medical devices",
+    "Security cameras",
+    "Photo equipment",
+    "Tactical equipment"
+  ],
+  "variants": {
+    "DLCR2": "Duracell designation",
+    "EL1CR2": "Energizer designation",
+    "KL2CR2": "Kodak designation",
+    "5046LC": "Rayovac designation",
+    "CR15H270": "IEC designation"
+  },
+  "current_capability": {
+    "continuous": "10-50",
+    "pulse": "500-1000",
+    "unit": "mA",
+    "notes": "Excellent pulse current capability for camera flashes"
+  },
+  "construction": {
+    "cells": 2,
+    "cell_voltage": "1.5V per cell",
+    "configuration": "2 x CR15266 cells in series",
+    "notes": "Equivalent to two CR123A-sized cells in series"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Do not short circuit",
+    "Avoid extreme temperatures during use",
+    "Dispose properly - contains lithium metal",
+    "High current capability - handle with care"
+  ],
+  "performance_characteristics": {
+    "voltage_stability": "Excellent - maintains 3V throughout most of discharge",
+    "temperature_performance": "Superior to alkaline in extreme temperatures",
+    "shelf_life": "10+ years with minimal capacity loss",
+    "pulse_capability": "Excellent for camera flash applications"
+  },
+  "comparison_to_alternatives": {
+    "vs_2xaa": "Higher voltage (3V vs 3V fresh), much longer life, better temperature performance",
+    "vs_cr123a": "Same voltage, higher capacity, different physical size"
+  },
+  "notes": "Popular in photography equipment due to excellent pulse current capability and voltage stability. Essentially two lithium cells in series, providing 3V output with high capacity. Preferred over AA batteries in cameras for better performance and longer life.",
+  "sources": [
+    {
+      "name": "Energizer CR2 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr2.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell Ultra CR2 Technical Specifications",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/CR2_US_CT.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic CR2 Lithium Battery Datasheet",
+      "url": "https://na.industrial.panasonic.com/sites/default/pidsa/files/downloads/files/cr2_series.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

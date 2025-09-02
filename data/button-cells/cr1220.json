@@ -1,0 +1,121 @@
+{
+  "type": "CR1220",
+  "designation": "Lithium coin cell",
+  "iec_code": "CR1220",
+  "common_names": ["CR1220", "Coin cell", "Thin coin cell", "Micro coin cell"],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3.0,
+      "voltage_end": 2.0,
+      "capacity_typical": "35-40",
+      "capacity_unit": "mAh",
+      "self_discharge": "1% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 12.5,
+    "height": 2.0,
+    "unit": "mm",
+    "shape": "coin/disc",
+    "notes": "12 = diameter in mm, 20 = height in tenths of mm"
+  },
+  "weight": {
+    "typical": "0.9",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 85,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 100,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 10,
+    "notes": "Retains 90% capacity after 10 years at room temperature"
+  },
+  "common_devices": [
+    "Watches (thin profile)",
+    "Calculators",
+    "Small remotes",
+    "Medical devices",
+    "Digital thermometers",
+    "Key fobs",
+    "Small electronics",
+    "Backup memory applications",
+    "IoT sensors",
+    "Hearing aids"
+  ],
+  "variants": {
+    "CR1216": "Same diameter, 1.6mm thick, ~25mAh",
+    "CR1225": "Same diameter, 2.5mm thick, ~50mAh",
+    "DL1220": "Duracell equivalent designation",
+    "ECR1220": "Energizer equivalent designation",
+    "BR1220": "Carbon monofluoride chemistry version"
+  },
+  "current_capability": {
+    "continuous": "0.1-0.2",
+    "pulse": "1-2",
+    "unit": "mA",
+    "notes": "Very low current capability due to small size"
+  },
+  "comparison_to_common": {
+    "vs_cr2032": "38% smaller diameter, 38% thinner, ~17% capacity",
+    "vs_cr2025": "38% smaller diameter, 20% thinner, ~24% capacity"
+  },
+  "applications_by_current": {
+    "microamp_range": "Real-time clocks, memory backup, CMOS settings",
+    "low_milliamp": "Digital watches, simple calculators",
+    "pulse_applications": "Key fobs with LED indicators"
+  },
+  "safety_notes": [
+    "Do not recharge",
+    "Extreme choking hazard due to small size",
+    "Keep away from children and pets",
+    "Do not crush or puncture",
+    "Dispose properly - contains lithium metal"
+  ],
+  "handling_considerations": {
+    "size_precautions": "Easily lost due to tiny size",
+    "installation": "Use tweezers or small tools for handling",
+    "polarity": "Ensure correct orientation - damage risk if reversed"
+  },
+  "performance_characteristics": {
+    "voltage_stability": "Excellent - maintains 3V throughout most of discharge",
+    "temperature_performance": "Good performance across wide temperature range",
+    "shelf_life": "10+ years with minimal capacity loss",
+    "current_limitations": "Limited to very low current applications"
+  },
+  "notes": "One of the thinnest coin cell batteries available, designed for applications where space is extremely limited. The small size severely limits capacity and current capability, making it suitable only for ultra-low power applications like watch circuits and memory backup.",
+  "sources": [
+    {
+      "name": "Energizer CR1220 Technical Datasheet",
+      "url": "https://data.energizer.com/pdfs/cr1220.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Panasonic CR1220 Specifications",
+      "url": "https://na.industrial.panasonic.com/sites/default/pidsa/files/downloads/files/cr1220_series.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Duracell CR1220 Technical Data",
+      "url": "https://www.duracell.com/wp-content/uploads/2016/03/CR1220JCS0820.pdf",
+      "date_accessed": "2025-09-01",
+      "type": "manufacturer_datasheet"
+    }
+  ],
+  "last_updated": "2025-09-01"
+}

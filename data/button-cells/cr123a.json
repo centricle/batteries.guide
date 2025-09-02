@@ -1,0 +1,64 @@
+{
+  "type": "CR123A",
+  "common_names": [
+    "CR123A"
+  ],
+  "chemistry": {
+    "lithium_manganese_dioxide": {
+      "voltage_nominal": 3,
+      "voltage_end": 2,
+      "capacity_typical": "1500-1700",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 17,
+    "height": 34.5,
+    "unit": "mm"
+  },
+  "weight": {
+    "typical": "17",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Cameras",
+    "Flashlights",
+    "Security sensors",
+    "Medical devices",
+    "Smoke detectors"
+  ],
+  "notes": "High-capacity cylindrical lithium battery. Popular in professional photography and high-drain devices. Also known as 123A, CR123, DL123A, K123LA.",
+  "sources": [
+    {
+      "name": "Wikipedia - Button Cell",
+      "url": "https://en.wikipedia.org/wiki/Button_cell",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Components101 - CR2032 and Button Cell Guide",
+      "url": "https://components101.com/batteries/cr2032-lithium-coin-cell-pinout-specs-equivalent-datasheet",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Microbattery - CR123A Battery Information",
+      "url": "https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-cr2032-battery/",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

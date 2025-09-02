@@ -1,0 +1,94 @@
+{
+  "type": "675",
+  "designation": "A675",
+  "iec_code": "PR44",
+  "common_names": ["675", "A675", "PR44", "Size 675"],
+  "chemistry": {
+    "zinc_air": {
+      "voltage_nominal": 1.45,
+      "voltage_end": 1.1,
+      "capacity_typical": "600-650",
+      "capacity_unit": "mAh",
+      "self_discharge": "Activated by air exposure",
+      "discharge_rate": "High current optimized"
+    }
+  },
+  "dimensions": {
+    "diameter": 11.6,
+    "height": 5.4,
+    "unit": "mm",
+    "shape": "button/disc",
+    "notes": "Largest hearing aid battery size"
+  },
+  "weight": {
+    "typical": "1.9",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top surface (flat)",
+    "negative": "bottom surface",
+    "type": "metal contact with air holes"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": 0,
+      "max": 40,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 10,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 4,
+    "notes": "Sealed tab prevents air activation. Once tab removed, battery must be used within days"
+  },
+  "color_code": "Blue",
+  "common_devices": [
+    "Power hearing aids",
+    "Super power hearing aids",
+    "Body-worn hearing aids",
+    "Cochlear implant processors",
+    "Bone-anchored hearing aids (BAHA)"
+  ],
+  "variants": {
+    "rechargeable_options": "Silver-zinc and lithium-ion rechargeable versions available"
+  },
+  "safety_notes": [
+    "Keep away from children - choking hazard",
+    "Do not remove tab until ready to use", 
+    "Air-activated chemistry - seal air holes to extend life",
+    "Do not store in refrigerator",
+    "Replace when hearing aid beeps or sounds distorted"
+  ],
+  "usage_notes": [
+    "Wait 1-2 minutes after removing tab before inserting",
+    "Allows air to fully activate the battery",
+    "Typical lifespan: 14-20 days depending on usage",
+    "Highest capacity for power-hungry devices"
+  ],
+  "notes": "Largest hearing aid battery with highest capacity. Zinc-air chemistry provides stable voltage and high energy density. Air-activated system requires removal of sealing tab. Color-coded blue for easy identification. Designed for power hearing aids and high-drain applications.",
+  "sources": [
+    {
+      "name": "Battery Equivalents - Hearing Aid Batteries Guide",
+      "url": "https://www.batteryequivalents.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Wikipedia - Zinc-Air Battery",
+      "url": "https://en.wikipedia.org/wiki/Zinc–air_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Microbattery - Size 675 Hearing Aid Batteries",
+      "url": "https://www.microbattery.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

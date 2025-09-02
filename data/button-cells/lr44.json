@@ -1,0 +1,66 @@
+{
+  "type": "LR44",
+  "designation": "AG13",
+  "common_names": [
+    "LR44",
+    "AG13"
+  ],
+  "chemistry": {
+    "alkaline": {
+      "voltage_nominal": 1.5,
+      "voltage_end": 1.0,
+      "capacity_typical": "150",
+      "capacity_unit": "mAh"
+    }
+  },
+  "dimensions": {
+    "diameter": 11.6,
+    "height": 5.4,
+    "unit": "mm"
+  },
+  "weight": {
+    "typical": "2.0",
+    "unit": "g"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Calculators",
+    "Laser pointers",
+    "Small toys",
+    "Digital thermometers",
+    "Watches"
+  ],
+  "notes": "Small alkaline button cell battery. Also known as AG13, A76, 357, SR44. Common in small electronics and toys.",
+  "sources": [
+    {
+      "name": "Wikipedia - Button Cell",
+      "url": "https://en.wikipedia.org/wiki/Button_cell",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Components101 - CR2032 and Button Cell Guide",
+      "url": "https://components101.com/batteries/cr2032-lithium-coin-cell-pinout-specs-equivalent-datasheet",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Microbattery - LR44 Button Cell Information",
+      "url": "https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-cr2032-battery/",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

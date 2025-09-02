@@ -1,0 +1,149 @@
+{
+  "type": "SR626SW",
+  "designation": "Silver oxide watch battery",
+  "iec_code": "SR626SW",
+  "common_names": ["SR626SW", "377", "376", "Watch battery", "Silver oxide button cell"],
+  "chemistry": {
+    "silver_oxide": {
+      "voltage_nominal": 1.55,
+      "voltage_end": 1.2,
+      "capacity_typical": "25-28",
+      "capacity_energizer": "24",
+      "capacity_maxell": "28",
+      "capacity_renata": "27",
+      "capacity_unit": "mAh",
+      "electrolyte": "Sodium hydroxide (NaOH)",
+      "self_discharge": "<10% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 6.8,
+    "height": 2.6,
+    "unit": "mm",
+    "shape": "button/coin",
+    "notes": "SR626 = 6.8mm diameter, 2.6mm height"
+  },
+  "weight": {
+    "typical": "0.4",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top (larger surface)",
+    "negative": "bottom (smaller surface)",
+    "type": "metal contact"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -10,
+      "max": 60,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -20,
+      "max": 60,
+      "unit": "°C"
+    }
+  },
+  "discharge_characteristics": {
+    "nominal_current": "30-50",
+    "test_current_energizer": "31",
+    "test_load_duracell": "47000",
+    "current_unit": "μA",
+    "load_unit": "Ω",
+    "voltage_stability": "Very stable 1.55V output until depletion"
+  },
+  "shelf_life": {
+    "years": 3,
+    "range": "3-5",
+    "notes": "Excellent leak resistance compared to alkaline equivalents"
+  },
+  "common_devices": [
+    "Analog watches",
+    "Digital watches",
+    "Small calculators",
+    "Medical devices",
+    "Hearing aids",
+    "Small LED lights",
+    "Precision instruments",
+    "Electronic jewelry",
+    "Small remote controls",
+    "Micro cameras"
+  ],
+  "equivalents": {
+    "energizer": "377/376",
+    "duracell": "D377/D376", 
+    "renata": "377",
+    "varta": "V377",
+    "maxell": "SR626SW",
+    "sony": "SR626SW",
+    "panasonic": "SP377",
+    "toshiba": "SR626SW"
+  },
+  "variants": {
+    "SR626SW": "Standard watch battery version",
+    "SR626W": "High drain version (same size, slightly different chemistry)",
+    "377": "Multi-drain version suitable for both analog and digital watches",
+    "376": "Low drain version optimized for analog watches"
+  },
+  "manufacturers": [
+    "Energizer (377/376)",
+    "Renata (377)",
+    "Sony (SR626SW)",
+    "Maxell (SR626SW)",
+    "Varta (V377)",
+    "Duracell (D377)",
+    "Panasonic (SP377)",
+    "Toshiba (SR626SW)"
+  ],
+  "safety_notes": [
+    "Do not recharge",
+    "Keep away from children - choking hazard",
+    "Do not crush or puncture",
+    "Excellent leak resistance",
+    "Dispose properly at battery recycling centers",
+    "Contains silver oxide - handle with care"
+  ],
+  "performance_characteristics": {
+    "discharge_curve": "Very flat - maintains stable voltage until depletion",
+    "leak_resistance": "Excellent - superior to alkaline equivalents",
+    "temperature_stability": "Good performance across operating range",
+    "precision_timing": "Ideal for accurate timekeeping applications"
+  },
+  "standards_compliance": {
+    "iec_60086_3": "Complies with IEC 60086-3 watch battery standard",
+    "rohs": "RoHS compliant",
+    "mercury_free": "Mercury-free composition"
+  },
+  "notes": "High-quality silver oxide button cell optimized for precision timing applications like watches. Provides very stable 1.55V output with flat discharge curve, making it superior to alkaline equivalents for timing-critical devices. The 'SW' designation indicates it's suitable for watch applications requiring stable voltage.",
+  "cross_references": {
+    "lr626_comparison": "Superior voltage stability vs LR626 alkaline equivalent",
+    "sr621sw_comparison": "Larger capacity than smaller SR621SW",
+    "cr2016_comparison": "Lower voltage (1.55V vs 3.0V) but better for precision timing"
+  },
+  "sources": [
+    {
+      "name": "Battery Equivalents SR626SW Technical Reference",
+      "url": "https://www.batteryequivalents.com/ag4-lr626-376-377-sr626-sr626sw-battery-equivalents.html",
+      "date_accessed": "2025-01-09",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Energizer 377/376 Product Information",
+      "url": "https://data.energizer.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "Renata Watch Battery Specifications",
+      "url": "https://www.renata.com/",
+      "date_accessed": "2025-01-09",
+      "type": "manufacturer_datasheet"
+    },
+    {
+      "name": "IEC 60086-3 Watch Battery Standards",
+      "date_accessed": "2025-01-09",
+      "type": "iec_standard"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

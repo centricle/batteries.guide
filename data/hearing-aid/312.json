@@ -1,0 +1,93 @@
+{
+  "type": "312",
+  "designation": "A312",
+  "iec_code": "PR41",
+  "common_names": ["312", "A312", "PR41", "Size 312"],
+  "chemistry": {
+    "zinc_air": {
+      "voltage_nominal": 1.45,
+      "voltage_end": 1.1,
+      "capacity_typical": "175-190",
+      "capacity_unit": "mAh",
+      "self_discharge": "Activated by air exposure",
+      "discharge_rate": "Low to medium current optimized"
+    }
+  },
+  "dimensions": {
+    "diameter": 7.9,
+    "height": 3.6,
+    "unit": "mm",
+    "shape": "button/disc",
+    "notes": "Mid-size hearing aid battery"
+  },
+  "weight": {
+    "typical": "0.58",
+    "unit": "g"
+  },
+  "terminals": {
+    "positive": "top surface (flat)",
+    "negative": "bottom surface",
+    "type": "metal contact with air holes"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": 0,
+      "max": 40,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": 10,
+      "max": 25,
+      "unit": "°C"
+    }
+  },
+  "shelf_life": {
+    "years": 4,
+    "notes": "Sealed tab prevents air activation. Once tab removed, battery must be used within days"
+  },
+  "color_code": "Brown",
+  "common_devices": [
+    "Behind-the-ear (BTE) hearing aids",
+    "Receiver-in-canal (RIC) hearing aids",
+    "In-the-ear (ITE) hearing aids",
+    "Hearing aid accessories"
+  ],
+  "variants": {
+    "rechargeable_options": "Silver-zinc and lithium-ion rechargeable versions available"
+  },
+  "safety_notes": [
+    "Keep away from children - choking hazard",
+    "Do not remove tab until ready to use",
+    "Air-activated chemistry - seal air holes to extend life",
+    "Do not store in refrigerator",
+    "Replace when hearing aid beeps or sounds distorted"
+  ],
+  "usage_notes": [
+    "Wait 1-2 minutes after removing tab before inserting",
+    "Allows air to fully activate the battery",
+    "Typical lifespan: 7-10 days depending on usage",
+    "Popular size for many hearing aid models"
+  ],
+  "notes": "Mid-size hearing aid battery. Zinc-air chemistry provides stable voltage and high energy density. Air-activated system requires removal of sealing tab. Color-coded brown for easy identification. Good balance of size and capacity.",
+  "sources": [
+    {
+      "name": "Battery Equivalents - Hearing Aid Batteries Guide",
+      "url": "https://www.batteryequivalents.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "technical_reference"
+    },
+    {
+      "name": "Wikipedia - Zinc-Air Battery",
+      "url": "https://en.wikipedia.org/wiki/Zinc–air_battery",
+      "date_accessed": "2025-09-01",
+      "type": "encyclopedia"
+    },
+    {
+      "name": "Microbattery - Hearing Aid Battery Size 312",
+      "url": "https://www.microbattery.com/hearing-aid-batteries.html",
+      "date_accessed": "2025-09-01",
+      "type": "distributor_reference"
+    }
+  ],
+  "last_updated": "2025-01-09"
+}

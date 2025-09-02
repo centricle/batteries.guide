@@ -1,0 +1,81 @@
+{
+  "type": "CR1632",
+  "designation": "CR1632",
+  "iec_code": "CR1632",
+  "common_names": [
+    "CR1632",
+    "DL1632",
+    "ECR1632",
+    "BR1632"
+  ],
+  "chemistry": {
+    "lithium": {
+      "voltage_nominal": 3.0,
+      "voltage_fresh": 3.3,
+      "voltage_end": 2.0,
+      "capacity_typical": "125mAh",
+      "capacity_range": "120-140mAh",
+      "capacity_unit": "mAh",
+      "max_discharge_continuous": "0.2mA",
+      "discharge_rate": "Low",
+      "discharge_unit": "mA",
+      "self_discharge": "<2% per year"
+    }
+  },
+  "dimensions": {
+    "diameter": 16.0,
+    "height": 3.2,
+    "unit": "mm",
+    "shape": "Coin"
+  },
+  "weight": {
+    "unit": "g",
+    "lithium": "1.3"
+  },
+  "temperature_range": {
+    "operating": {
+      "min": -30,
+      "max": 70,
+      "unit": "°C"
+    },
+    "storage": {
+      "min": -40,
+      "max": 85,
+      "unit": "°C"
+    }
+  },
+  "common_devices": [
+    "Computer motherboards (CMOS)",
+    "Watches",
+    "Calculators",
+    "Car key fobs",
+    "Medical devices",
+    "Digital calipers",
+    "Electronic scales"
+  ],
+  "shelf_life": {
+    "years": 10,
+    "notes": "Excellent shelf life due to lithium chemistry"
+  },
+  "safety_notes": [
+    "Swallowing hazard - keep away from children",
+    "Do not short circuit",
+    "Dispose properly at battery recycling centers"
+  ],
+  "manufacturers": [
+    "Energizer",
+    "Duracell",
+    "Panasonic",
+    "Maxell",
+    "Varta"
+  ],
+  "sources": [
+    {
+      "name": "Energizer CR1632 Datasheet", 
+      "url": "https://data.energizer.com/pdfs/cr1632.pdf",
+      "access_date": "2025-01-15",
+      "notes": "Official manufacturer specifications"
+    }
+  ],
+  "notes": "Popular lithium coin cell with good capacity for its size. Commonly used as CMOS battery in computers and various electronic devices."
+}
