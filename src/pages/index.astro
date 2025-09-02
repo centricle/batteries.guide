@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BatteryCard from '../components/BatteryCard.astro';
+import { getAllCategories } from '../utils/batteryData';
+
+const categories = getAllCategories();
+---
+
+<BaseLayout>
+  <div class="bg-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+          Complete Battery Database
+        </h1>
+        <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
+          Comprehensive specifications, dimensions, and technical data for every consumer battery type. 
+          From AA alkalines to 18650 lithium-ions to button cells.
+        </p>
+        <div class="mt-8">
+          <form method="GET" action="/search" class="flex justify-center" role="search" aria-label="Search batteries">
+            <div class="relative w-full max-w-lg">
+              <input 
+                type="search" 
+                name="q"
+                placeholder="Search batteries (e.g. AA, 18650, CR2032)..."
+                aria-label="Search battery database"
+                class="w-full px-4 py-3 pr-12 text-gray-900 bg-white border-0 shadow-lg focus:ring-2 focus:ring-blue-300 focus:outline-none"
+              />
+              <button 
+                type="submit"
+                aria-label="Search batteries"
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-900 transition-colors"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Battery Categories</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Browse batteries by category or search for specific types. All data is sourced from manufacturer specifications and industry standards.
+      </p>
+    </div>
+
+    <div class="space-y-16">
+      {categories.map((category) => (
+        <section>
+          <div class="flex justify-between items-center mb-8">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">{category.name}</h3>
+              <p class="text-gray-600 mt-1">{category.description}</p>
+            </div>
+            <a 
+              href={`/${category.slug}`} 
+              class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-900 font-medium border border-transparent uppercase transition-colors hover:bg-blue-200 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+            >
+              View All
+              <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {category.batteries.slice(0, 3).map((battery) => (
+              <BatteryCard battery={battery} category={category.slug} />
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

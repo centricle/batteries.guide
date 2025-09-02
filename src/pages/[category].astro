@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BatteryCard from '../components/BatteryCard.astro';
+import { getAllCategories } from '../utils/batteryData';
+
+export async function getStaticPaths() {
+  const categories = getAllCategories();
+  
+  return categories.map(category => ({
+    params: { category: category.slug },
+    props: { categoryData: category }
+  }));
+}
+
+const { categoryData } = Astro.props;
+const title = `${categoryData.name} | Batteries.Guide`;
+const description = `Complete specifications for ${categoryData.name.toLowerCase()}: ${categoryData.description}`;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Header Section -->
+      <div class="mb-12">
+        <nav class="mb-6 flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="/" class="text-gray-700 hover:underline">Home</a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <span class="mr-2 text-gray-400">/</span>
+                <span class="text-gray-500 uppercase">{categoryData.name}</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{categoryData.name}</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            {categoryData.description}
+          </p>
+          <div class="inline-flex items-center bg-blue-100 px-4 py-2 text-blue-900 spec-label">
+            <span class="font-medium">{categoryData.batteries.length} battery types documented</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Battery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categoryData.batteries.map((battery) => (
+          <BatteryCard battery={battery} category={categoryData.slug} />
+        ))}
+      </div>
+
+      <!-- Category-specific Information -->
+      <div class="mt-16 bg-gray-50 p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">
+          About {categoryData.name}
+        </h2>
+        
+        {categoryData.slug === 'traditional' && (
+          <div class="prose prose-gray max-w-none">
+            <p class="text-gray-700 mb-4">
+              Traditional batteries include the most common household battery sizes using alkaline, 
+              carbon-zinc, or NiMH chemistry. These are typically primary (non-rechargeable) cells 
+              with standardized sizes defined by ANSI and IEC specifications.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Common Chemistries</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>Alkaline (LR series) - Most common, good capacity</li>
+                  <li>Lithium (FR series) - Long shelf life, temperature tolerant</li>
+                  <li>NiMH - Rechargeable, environmentally friendly</li>
+                  <li>Carbon-zinc (R series) - Low cost, basic performance</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Size Naming</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>AA, AAA, C, D - Consumer names</li>
+                  <li>LR6, LR03, LR14, LR20 - IEC designations</li>
+                  <li>15A, 24A, 14A, 13A - ANSI codes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {categoryData.slug === 'lithium-ion' && (
+          <div class="prose prose-gray max-w-none">
+            <p class="text-gray-700 mb-4">
+              Lithium-ion batteries are rechargeable cells with high energy density and long cycle life. 
+              The naming convention uses a 5-digit code: first two digits are diameter in mm, 
+              next two are height in mm, last digit indicates shape (0 = cylindrical).
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Key Specifications</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>Nominal voltage: 3.6-3.7V</li>
+                  <li>Charge voltage: 4.2V maximum</li>
+                  <li>Discharge cutoff: 2.5-3.0V minimum</li>
+                  <li>Cycle life: 300-1500+ cycles</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Safety Notes</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>Never exceed 4.2V charging</li>
+                  <li>Use appropriate charger (CC/CV profile)</li>
+                  <li>Avoid physical damage or short circuits</li>
+                  <li>Store at 40-60% charge for long term</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {categoryData.slug === 'button-cells' && (
+          <div class="prose prose-gray max-w-none">
+            <p class="text-gray-700 mb-4">
+              Button cells (also called coin cells) are small, disc-shaped batteries used in watches, 
+              calculators, key fobs, and small electronics. The naming typically indicates chemistry 
+              and size: first letters show chemistry, numbers show diameter and height.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Common Chemistries</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>CR - Lithium (3V, long shelf life)</li>
+                  <li>LR - Alkaline (1.5V, economical)</li>
+                  <li>SR - Silver oxide (1.55V, stable voltage)</li>
+                  <li>PR - Zinc-air (1.4V, hearing aids)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Size Codes</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>CR2032: 20mm diameter × 3.2mm thick</li>
+                  <li>LR44: 11.6mm diameter × 5.4mm thick</li>
+                  <li>CR123A: 17mm diameter × 34.5mm tall</li>
+                  <li>Numbers = dimensions in mm or 0.1mm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {categoryData.slug === 'camera' && (
+          <div class="prose prose-gray max-w-none">
+            <p class="text-gray-700 mb-4">
+              Camera batteries are specialized formats designed for photography equipment requiring 
+              high pulse current capability for flash discharge. Most are lithium chemistry for 
+              stable voltage and temperature performance. Largely superseded by proprietary Li-ion 
+              packs in modern digital cameras.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Common Types</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>2CR5 - 6V lithium, rectangular form factor</li>
+                  <li>CR-P2 - 6V lithium, compact design</li>
+                  <li>CR-V3 - 3V lithium, AA form factor replacement</li>
+                  <li>4LR44 - 6V alkaline, small cylindrical</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Key Features</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>High pulse current for flash discharge</li>
+                  <li>Lithium chemistry dominant for performance</li>
+                  <li>Rectangular form factors maximize capacity</li>
+                  <li>Wide temperature range operation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {categoryData.slug === 'hearing-aid' && (
+          <div class="prose prose-gray max-w-none">
+            <p class="text-gray-700 mb-4">
+              Hearing aid batteries use zinc-air chemistry activated by removing a sealing tab. 
+              Color-coded for universal identification across manufacturers. High energy density 
+              but limited lifespan once activated due to air exposure. Sizes correspond to 
+              hearing aid power requirements.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Color Code System</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>Size 10 (Yellow) - Small hearing aids</li>
+                  <li>Size 312 (Brown) - Medium hearing aids</li>
+                  <li>Size 13 (Orange) - Large hearing aids</li>
+                  <li>Size 675 (Blue) - Power hearing aids</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Zinc-Air Properties</h3>
+                <ul class="space-y-1 text-gray-700">
+                  <li>Air-activated by removing sealing tab</li>
+                  <li>High energy density, stable voltage</li>
+                  <li>3-14 day lifespan once activated</li>
+                  <li>Cannot be recharged or deactivated</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

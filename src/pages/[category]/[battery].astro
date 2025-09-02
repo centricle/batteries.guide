@@ -1,0 +1,309 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BatterySchema from '../../components/BatterySchema.astro';
+import BatterySchematic from '../../components/BatterySchematic.astro';
+import { loadBatteryData, getAllCategories, type BatterySpec, getDimension, hasDimension } from '../../utils/batteryData';
+import { filterTrustedSources } from '../../utils/trustedSources';
+
+export interface Props {
+  battery: BatterySpec;
+  categoryName: string;
+}
+
+export async function getStaticPaths() {
+  const categories = getAllCategories();
+  const paths: Array<{
+    params: { category: string; battery: string };
+    props: { battery: BatterySpec; categoryName: string };
+  }> = [];
+  
+  categories.forEach(category => {
+    category.batteries.forEach(battery => {
+      const slug = battery.type.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      paths.push({
+        params: { 
+          category: category.slug, 
+          battery: slug 
+        },
+        props: { 
+          battery, 
+          categoryName: category.name 
+        }
+      });
+    });
+  });
+  
+  return paths;
+}
+
+const { battery, categoryName }: Props = Astro.props;
+const { category } = Astro.params as { category: string; battery: string };
+
+// Get primary chemistry for display
+const primaryChemistry = Object.keys(battery.chemistry)[0];
+const primaryChemInfo = battery.chemistry[primaryChemistry];
+
+// Filter sources to only trusted domains
+const trustedSources = battery.sources ? filterTrustedSources(battery.sources) : [];
+
+const title = `${battery.type} Battery Specifications | Batteries.Guide`;
+const description = `Complete technical specifications for ${battery.type} batteries including dimensions, voltage, capacity, weight, and compatibility information.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <BatterySchema battery={battery} category={categoryName} />
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-8 flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a href="/" class="text-gray-700 hover:underline">Home</a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="mr-2 text-gray-400">/</span>
+              <a href={`/${category}`} class="text-gray-700 hover:underline">{categoryName}</a>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="mr-2 text-gray-400">/</span>
+              <span class="text-gray-500 uppercase">{battery.type}</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white">
+            <div class="mb-8">
+              <h1 class="text-4xl font-bold text-gray-900 mb-2">{battery.type} Battery</h1>
+              {battery.designation && (
+                <p class="text-xl text-gray-600 mb-4">Also known as: {battery.designation}</p>
+              )}
+              <p class="text-gray-700">{battery.notes}</p>
+            </div>
+
+            <!-- Quick Specs -->
+            <div class="bg-gray-50 p-6 mb-8">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Specifications</h2>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
+                  <p class="text-gray-500 text-sm">Voltage</p>
+                  <p class="text-2xl font-bold text-gray-900">{primaryChemInfo.voltage_nominal}V</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-500 text-sm">Capacity</p>
+                  <p class="text-2xl font-bold text-gray-900">
+                    {primaryChemInfo.capacity_typical || primaryChemInfo.capacity_range}
+                    <span class="text-sm font-normal">{primaryChemInfo.capacity_unit || 'mAh'}</span>
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-500 text-sm">Size</p>
+                  <p class="text-2xl font-bold text-gray-900">
+                    {hasDimension(battery, 'diameter') ? `⌀${getDimension(battery, 'diameter')}` : `${getDimension(battery, 'width')}×${getDimension(battery, 'depth')}`}
+                    <span class="text-sm font-normal">mm</span>
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-gray-500 text-sm">Height</p>
+                  <p class="text-2xl font-bold text-gray-900">
+                    {getDimension(battery, 'height')}
+                    <span class="text-sm font-normal">mm</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technical Drawing -->
+            <BatterySchematic battery={battery} />
+
+            <!-- Detailed Specifications -->
+            <div class="space-y-8">
+              <!-- Chemistry Variants -->
+              <section>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Chemistry & Performance</h2>
+                <div class="overflow-x-auto">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50 font-semibold">
+                      <tr>
+                        <th class="px-6 py-3 tracking-wider">Chemistry</th>
+                        <th class="px-6 py-3 tracking-wider">Voltage</th>
+                        <th class="px-6 py-3 tracking-wider">Capacity</th>
+                        <th class="px-6 py-3 tracking-wider">End Voltage</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                      {Object.entries(battery.chemistry).map(([chemType, specs]) => (
+                        <tr>
+                          <td class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900 uppercase">
+                            {chemType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{specs.voltage_nominal}V</td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            {specs.capacity_typical || specs.capacity_range} {specs.capacity_unit || 'mAh'}
+                          </td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{specs.voltage_end}V</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <!-- Physical Specifications -->
+              <section>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Physical Specifications</h2>
+                <div class="bg-gray-50 p-6">
+                  <dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {hasDimension(battery, 'diameter') && (
+                      <div>
+                        <dt class="text-sm font-medium text-gray-500 uppercase">Diameter</dt>
+                        <dd class="text-lg text-gray-900">{getDimension(battery, 'diameter')} mm</dd>
+                      </div>
+                    )}
+                    {hasDimension(battery, 'width') && (
+                      <div>
+                        <dt class="text-sm font-medium text-gray-500 uppercase">Width</dt>
+                        <dd class="text-lg text-gray-900">{getDimension(battery, 'width')} mm</dd>
+                      </div>
+                    )}
+                    {hasDimension(battery, 'depth') && (
+                      <div>
+                        <dt class="text-sm font-medium text-gray-500 uppercase">Depth</dt>
+                        <dd class="text-lg text-gray-900">{getDimension(battery, 'depth')} mm</dd>
+                      </div>
+                    )}
+                    <div>
+                      <dt class="text-sm font-medium text-gray-500 uppercase">Height</dt>
+                      <dd class="text-lg text-gray-900">{getDimension(battery, 'height')} mm</dd>
+                    </div>
+                    {Object.entries(battery.weight).filter(([key]) => key !== 'unit').map(([type, weight]) => (
+                      <div>
+                        <dt class="text-sm font-medium text-gray-500 uppercase">Weight ({type})</dt>
+                        <dd class="text-lg text-gray-900">{weight} {battery.weight.unit}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </section>
+
+              <!-- Standard Codes -->
+              {(battery.iec_code || battery.ansi_code) && (
+                <section>
+                  <h2 class="text-2xl font-semibold text-gray-900 mb-4">Standard Designations</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {battery.iec_code && (
+                      <div class="bg-gray-50 p-4">
+                        <h3 class="font-semibold text-gray-900">IEC Code</h3>
+                        <p class="text-lg text-gray-700">{battery.iec_code}</p>
+                      </div>
+                    )}
+                    {battery.ansi_code && (
+                      <div class="bg-gray-50 p-4">
+                        <h3 class="font-semibold text-gray-900">ANSI Code</h3>
+                        <p class="text-lg text-gray-700">{battery.ansi_code}</p>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="space-y-6">
+            <!-- Common Uses -->
+            <div class="bg-gray-50 p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Common Uses</h3>
+              <ul class="space-y-1 text-gray-700">
+                {battery.common_devices.map((device) => (
+                  <li>{device}</li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Temperature Range -->
+            {battery.temperature_range && (
+              <div class="bg-gray-50 p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Temperature Range</h3>
+                <div class="space-y-3">
+                  {battery.temperature_range.operating && (
+                    <div>
+                      <p class="text-sm text-gray-500">Operating</p>
+                      <p class="text-lg text-gray-900">
+                        {battery.temperature_range.operating.min}°C to {battery.temperature_range.operating.max}°C
+                      </p>
+                    </div>
+                  )}
+                  {battery.temperature_range.operating_discharge && (
+                    <div>
+                      <p class="text-sm text-gray-500">Operating (Discharge)</p>
+                      <p class="text-lg text-gray-900">
+                        {battery.temperature_range.operating_discharge.min}°C to {battery.temperature_range.operating_discharge.max}°C
+                      </p>
+                    </div>
+                  )}
+                  {battery.temperature_range.operating_charge && (
+                    <div>
+                      <p class="text-sm text-gray-500">Operating (Charge)</p>
+                      <p class="text-lg text-gray-900">
+                        {battery.temperature_range.operating_charge.min}°C to {battery.temperature_range.operating_charge.max}°C
+                      </p>
+                    </div>
+                  )}
+                  {battery.temperature_range.storage && (
+                    <div>
+                      <p class="text-sm text-gray-500">Storage</p>
+                      <p class="text-lg text-gray-900">
+                        {battery.temperature_range.storage.min}°C to {battery.temperature_range.storage.max}°C
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            <!-- Data Sources -->
+            {trustedSources.length > 0 && (
+              <div class="bg-gray-50 p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Data Sources</h3>
+                <ul class="space-y-3 text-sm">
+                  {trustedSources.map((source) => (
+                    <li>
+                      <a 
+                        href={source.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="hover:underline font-medium"
+                      >
+                        {source.name}
+                      </a>
+                      {(source.access_date || source.date_accessed) && (
+                        <p class="text-gray-500 text-xs mt-1">
+                          Retrieved: {source.access_date || source.date_accessed}
+                        </p>
+                      )}
+                      {source.notes && (
+                        <p class="text-gray-600 text-xs mt-1">
+                          {source.notes}
+                        </p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
