@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllCategories, searchBatteries, getDimension, hasDimension } from '../utils/batteryData';
+
+// Get data for server-side calculations only
+const allCategories = getAllCategories();
+const totalBatteryCount = allCategories.reduce((total, cat) => total + cat.batteries.length, 0);
+
+// Calculate popular search results dynamically
+const popularSearches = [
+  'AA', '18650', 'CR2032', 'lithium', 'alkaline', 'flashlight'
+].map(term => ({
+  term,
+  count: searchBatteries(term).length
+}));
+
+// Prepare minimal client-side data for search
+const clientBatteries = allCategories.flatMap(cat => 
+  cat.batteries.map(battery => {
+    const primaryChemistry = Object.keys(battery.chemistry)[0];
+    const primaryChemInfo = battery.chemistry[primaryChemistry];
+    
+    return {
+      // Search fields
+      type: battery.type,
+      designation: battery.designation,
+      iec_code: battery.iec_code,
+      ansi_code: battery.ansi_code,
+      common_names: battery.common_names,
+      common_devices: battery.common_devices,
+      chemistry_names: Object.keys(battery.chemistry), // Just the names
+      
+      // Display fields (minimal)
+      categorySlug: cat.slug,
+      primary_chemistry: primaryChemistry,
+      voltage: primaryChemInfo.voltage_nominal,
+      capacity: primaryChemInfo.capacity_typical || primaryChemInfo.capacity_range,
+      capacity_unit: primaryChemInfo.capacity_unit || 'mAh',
+      diameter: battery.dimensions.diameter,
+      diameter_min: battery.dimensions.diameter_min,
+      diameter_max: battery.dimensions.diameter_max,
+      width: battery.dimensions.width,
+      depth: battery.dimensions.depth,
+      height: battery.dimensions.height,
+      height_min: battery.dimensions.height_min,
+      height_max: battery.dimensions.height_max,
+      notes: battery.notes
+    };
+  })
+);
+
+const title = 'Search Batteries | Batteries.Guide';
+const description = 'Search the comprehensive battery database by type, chemistry, or device compatibility.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Header Section -->
+      <div class="mb-12">
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="/" class="text-gray-700 hover:underline">Home</a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <span class="mr-2 text-gray-400">/</span>
+                <span class="text-gray-500 uppercase">Search</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">Search Batteries</h1>
+          
+          <!-- Search Form -->
+          <div class="max-w-2xl mx-auto mb-8">
+            <form method="GET" action="/search" class="flex gap-4" role="search" aria-label="Search batteries">
+              <input 
+                type="search" 
+                name="q"
+                placeholder="Search by type, chemistry, or device (e.g. AA, lithium, flashlight)..."
+                aria-label="Search battery database by type, chemistry, or device"
+                class="flex-1 px-4 py-3 text-gray-900 bg-white border border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-300 focus:border-blue-300 focus:outline-none"
+              />
+              <button 
+                type="submit"
+                aria-label="Search batteries"
+                class="px-6 py-3 bg-blue-900 text-white font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none transition-colors"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+
+          <div id="search-status" class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-900" style="display: none;">
+            <span class="font-medium" id="search-status-text"></span>
+          </div>
+          
+          <div id="search-loading" class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700" style="display: none;">
+            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-gray-700" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span class="font-medium">Searching...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Results Container -->
+      <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="display: none;">
+      </div>
+
+      <!-- No Results -->
+      <div id="no-results" class="text-center py-12" style="display: none;">
+        <div class="mx-auto w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-semibold text-gray-900 mb-2">No results found</h2>
+        <p class="text-gray-600 mb-6">
+          No batteries matching "<span class="font-medium" id="no-results-query"></span>".
+        </p>
+        <div class="space-y-4">
+          <p class="text-sm text-gray-500">Try searching for:</p>
+          <div class="flex flex-wrap justify-center gap-2">
+            {['AA', 'AAA', '18650', 'CR2032', '9V', 'lithium', 'alkaline', 'flashlight'].map(suggestion => (
+              <a 
+                href={`/search?q=${suggestion}`}
+                class="px-3 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm focus:ring-2 focus:ring-gray-300 focus:outline-none"
+              >
+                {suggestion}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Default Content (when no search) -->
+        <!-- No Search Query - Show Popular Searches -->
+        <div class="text-center py-12">
+          <div class="mx-auto w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-12 h-12 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">Search the battery database</h2>
+          <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Find batteries by type (AA, 18650), chemistry (alkaline, lithium), or device (flashlight, remote control).
+            The database includes {totalBatteryCount} battery types with complete specifications.
+          </p>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Popular Searches</h3>
+              <div class="flex flex-wrap justify-center gap-3">
+                {popularSearches.map(item => (
+                  <a 
+                    href={`/search?q=${item.term}`}
+                    class="group px-4 py-3 bg-gray-50 hover:bg-blue-50 transition-colors"
+                  >
+                    <span class="font-medium text-gray-900 group-hover:text-blue-900">{item.term}</span>
+                    <span class="block text-sm text-gray-500">{item.count} result{item.count !== 1 ? 's' : ''}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Browse by Category</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
+                <a href="/traditional" class="p-4 bg-gray-50 hover:bg-blue-50 transition-colors group">
+                  <h4 class="font-medium text-gray-900 group-hover:text-blue-900">Traditional</h4>
+                  <p class="text-sm text-gray-500">AA, AAA, C, D, 9V</p>
+                </a>
+                <a href="/lithium-ion" class="p-4 bg-gray-50 hover:bg-blue-50 transition-colors group">
+                  <h4 class="font-medium text-gray-900 group-hover:text-blue-900">Lithium-ion</h4>
+                  <p class="text-sm text-gray-500">18650, 21700, 26650</p>
+                </a>
+                <a href="/button-cells" class="p-4 bg-gray-50 hover:bg-blue-50 transition-colors group">
+                  <h4 class="font-medium text-gray-900 group-hover:text-blue-900">Button Cells</h4>
+                  <p class="text-sm text-gray-500">CR2032, LR44, CR123A</p>
+                </a>
+                <a href="/camera" class="p-4 bg-gray-50 hover:bg-blue-50 transition-colors group">
+                  <h4 class="font-medium text-gray-900 group-hover:text-blue-900">Camera</h4>
+                  <p class="text-sm text-gray-500">CR-V3, CR-P2</p>
+                </a>
+                <a href="/hearing-aid" class="p-4 bg-gray-50 hover:bg-blue-50 transition-colors group">
+                  <h4 class="font-medium text-gray-900 group-hover:text-blue-900">Hearing Aid</h4>
+                  <p class="text-sm text-gray-500">10, 13, 312, 675</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script define:vars={{ clientBatteries }}>
+    // Battery data and search functionality
+    const batteryData = clientBatteries;
+    
+    // Client-side utility functions for dimensions (simplified)
+    function getDimension(battery, type) {
+      if (type === 'diameter') {
+        if (battery.diameter) return battery.diameter.toString();
+        if (battery.diameter_min && battery.diameter_max) {
+          return battery.diameter_min === battery.diameter_max ? 
+            battery.diameter_min.toString() : 
+            `${battery.diameter_min}-${battery.diameter_max}`;
+        }
+      }
+      
+      if (type === 'height') {
+        if (battery.height) return battery.height.toString();
+        if (battery.height_min && battery.height_max) {
+          return battery.height_min === battery.height_max ? 
+            battery.height_min.toString() : 
+            `${battery.height_min}-${battery.height_max}`;
+        }
+      }
+      
+      if (type === 'width' && battery.width) return battery.width.toString();
+      if (type === 'depth' && battery.depth) return battery.depth.toString();
+      
+      return '';
+    }
+    
+    function hasDimension(battery, type) {
+      switch (type) {
+        case 'diameter':
+          return !!(battery.diameter || (battery.diameter_min && battery.diameter_max));
+        case 'height':
+          return !!(battery.height || (battery.height_min && battery.height_max));
+        case 'width':
+          return !!battery.width;
+        case 'depth':
+          return !!battery.depth;
+        default:
+          return false;
+      }
+    }
+    
+    function searchBatteries(query) {
+      if (!query) return [];
+      
+      const searchTerm = query.toLowerCase();
+      
+      // Check for voltage pattern (e.g., "3.7V", "1.5v", "9 V")
+      const voltageMatch = query.match(/(\d+\.?\d*)\s*v/i);
+      const targetVoltage = voltageMatch ? parseFloat(voltageMatch[1]) : null;
+      
+      return batteryData.filter(battery => {
+        // Standard text matching
+        const textMatch = (
+          battery.type.toLowerCase().includes(searchTerm) ||
+          battery.designation?.toLowerCase().includes(searchTerm) ||
+          battery.iec_code?.toLowerCase().includes(searchTerm) ||
+          battery.ansi_code?.toLowerCase().includes(searchTerm) ||
+          battery.common_names.some(name => name.toLowerCase().includes(searchTerm)) ||
+          battery.common_devices.some(device => device.toLowerCase().includes(searchTerm)) ||
+          battery.chemistry_names.some(chem => chem.toLowerCase().includes(searchTerm))
+        );
+        
+        // Voltage matching
+        const voltageMatch = targetVoltage ? (battery.voltage === targetVoltage) : false;
+        
+        return textMatch || voltageMatch;
+      });
+    }
+    
+    function highlightSearchTerm(text, searchTerm) {
+      if (!searchTerm || !text) return text;
+      const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return text.replace(regex, '<mark class="bg-yellow-100 text-gray-900">$1</mark>');
+    }
+    
+    function createBatteryCard(battery, searchTerm) {
+      return `
+        <div class="bg-white shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200">
+          <a href="/${battery.categorySlug}/${battery.type.toLowerCase().replace(/[^a-z0-9]/g, '-')}" class="block p-6">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-1">${highlightSearchTerm(battery.type, searchTerm)}</h3>
+                ${battery.designation ? `<p class="text-gray-600 text-sm">${highlightSearchTerm(battery.designation, searchTerm)}</p>` : ''}
+              </div>
+              <div class="text-right">
+                <span class="inline-block px-2 py-1 bg-blue-100 text-blue-900 text-xs font-medium">
+                  ${highlightSearchTerm(battery.primary_chemistry.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()), searchTerm)}
+                </span>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Voltage</p>
+                <p class="text-gray-900 font-medium">${battery.voltage}V</p>
+              </div>
+              <div>
+                <p class="text-gray-500 text-xs uppercase tracking-wide">Capacity</p>
+                <p class="text-gray-900 font-medium">
+                  ${battery.capacity} ${battery.capacity_unit}
+                </p>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <p class="text-gray-500 text-xs uppercase tracking-wide mb-1">Dimensions</p>
+              <p class="text-gray-900 text-sm">
+                ${hasDimension(battery, 'diameter') ? `⌀${getDimension(battery, 'diameter')}mm` : `${getDimension(battery, 'width')}×${getDimension(battery, 'depth')}mm`}
+                × ${getDimension(battery, 'height')}mm
+              </p>
+            </div>
+            
+            <p class="text-gray-600 text-sm">${highlightSearchTerm(battery.notes, searchTerm)}</p>
+          </a>
+        </div>
+      `;
+    }
+    
+    function performSearch() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q') || '';
+      const searchInput = document.querySelector('input[name="q"]');
+      
+      if (searchInput) {
+        searchInput.value = query;
+      }
+      
+      if (!query) {
+        // Show default content
+        document.getElementById('search-status').style.display = 'none';
+        document.getElementById('search-loading').style.display = 'none';
+        document.getElementById('search-results').style.display = 'none';
+        document.getElementById('no-results').style.display = 'none';
+        return;
+      }
+      
+      // Show loading state
+      const loadingEl = document.getElementById('search-loading');
+      const statusEl = document.getElementById('search-status');
+      const resultsEl = document.getElementById('search-results');
+      const noResultsEl = document.getElementById('no-results');
+      
+      loadingEl.style.display = 'flex';
+      statusEl.style.display = 'none';
+      resultsEl.style.display = 'none';
+      noResultsEl.style.display = 'none';
+      
+      // Simulate brief loading delay for UX
+      setTimeout(() => {
+        const results = searchBatteries(query);
+        const statusTextEl = document.getElementById('search-status-text');
+        const noResultsQueryEl = document.getElementById('no-results-query');
+        
+        // Hide loading
+        loadingEl.style.display = 'none';
+        
+        // Update status
+        statusEl.style.display = 'flex';
+        statusTextEl.textContent = `${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"`;
+        
+        if (results.length > 0) {
+          // Show results
+          resultsEl.innerHTML = results.map(battery => createBatteryCard(battery, query)).join('');
+          resultsEl.style.display = 'grid';
+          noResultsEl.style.display = 'none';
+        } else {
+          // Show no results
+          noResultsQueryEl.textContent = query;
+          resultsEl.style.display = 'none';
+          noResultsEl.style.display = 'block';
+        }
+      }, 150); // Brief delay to show loading state
+    }
+    
+    // Perform search on page load
+    document.addEventListener('DOMContentLoaded', performSearch);
+    
+    // Handle form submission
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const query = formData.get('q');
+          const url = new URL(window.location);
+          url.searchParams.set('q', query);
+          window.history.pushState({}, '', url);
+          performSearch();
+        });
+      }
+    });
+  </script>
+</BaseLayout>
