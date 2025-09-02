@@ -1,0 +1,108 @@
+---
+import type { BatterySpec } from '../utils/batteryData';
+import { getDimension, hasDimension } from '../utils/batteryData';
+
+export interface Props {
+  battery: BatterySpec;
+  category: string;
+}
+
+const { battery, category } = Astro.props;
+
+// Get primary chemistry for main specs
+const primaryChemistry = Object.keys(battery.chemistry)[0];
+const primaryChemInfo = battery.chemistry[primaryChemistry];
+
+// Generate structured data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": `${battery.type} Battery`,
+  "description": battery.notes,
+  "category": `${category} batteries`,
+  "brand": battery.manufacturers || [],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Voltage",
+      "value": `${primaryChemInfo.voltage_nominal}V`,
+      "unitText": "volts"
+    },
+    {
+      "@type": "PropertyValue", 
+      "name": "Capacity",
+      "value": primaryChemInfo.capacity_typical || primaryChemInfo.capacity_range,
+      "unitText": primaryChemInfo.capacity_unit || "mAh"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Chemistry",
+      "value": primaryChemistry.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    },
+    ...(hasDimension(battery, 'diameter') ? [{
+      "@type": "PropertyValue",
+      "name": "Diameter", 
+      "value": `${getDimension(battery, 'diameter')}mm`,
+      "unitText": "millimeters"
+    }] : []),
+    ...(hasDimension(battery, 'width') ? [{
+      "@type": "PropertyValue",
+      "name": "Width",
+      "value": `${getDimension(battery, 'width')}mm`, 
+      "unitText": "millimeters"
+    }] : []),
+    ...(hasDimension(battery, 'depth') ? [{
+      "@type": "PropertyValue",
+      "name": "Depth",
+      "value": `${getDimension(battery, 'depth')}mm`,
+      "unitText": "millimeters" 
+    }] : []),
+    {
+      "@type": "PropertyValue",
+      "name": "Height",
+      "value": `${getDimension(battery, 'height')}mm`,
+      "unitText": "millimeters"
+    }
+  ],
+  "applicationCategory": battery.common_devices,
+  "alternateName": battery.common_names,
+  ...(battery.iec_code && {
+    "productID": battery.iec_code,
+    "gtin": battery.iec_code
+  }),
+  ...(battery.ansi_code && {
+    "mpn": battery.ansi_code
+  }),
+  ...(battery.designation && {
+    "model": battery.designation
+  }),
+  "offers": {
+    "@type": "AggregateOffer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD"
+  }
+};
+
+// Add chemistry variants as additional properties
+Object.entries(battery.chemistry).forEach(([chemType, specs]) => {
+  if (chemType !== primaryChemistry) {
+    structuredData.additionalProperty.push({
+      "@type": "PropertyValue",
+      "name": `${chemType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Voltage`,
+      "value": `${specs.voltage_nominal}V`,
+      "unitText": "volts"
+    });
+    
+    if (specs.capacity_typical || specs.capacity_range) {
+      structuredData.additionalProperty.push({
+        "@type": "PropertyValue",
+        "name": `${chemType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Capacity`,
+        "value": specs.capacity_typical || specs.capacity_range,
+        "unitText": specs.capacity_unit || "mAh"
+      });
+    }
+  }
+});
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
