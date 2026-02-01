@@ -40,7 +40,19 @@ const primaryChemInfo = battery.chemistry[primaryChemistry];
       <div>
         <p class="text-gray-500 uppercase tracking-wide">Capacity</p>
         <p class="text-gray-900 font-medium">
-          {primaryChemInfo.capacity_typical} {primaryChemInfo.capacity_unit || 'mAh'}
+          {(() => {
+            const typical = primaryChemInfo.capacity_typical;
+            const range = primaryChemInfo.capacity_range;
+            const unit = primaryChemInfo.capacity_unit || 'mAh';
+            // If capacity_typical already contains unit, use as-is
+            if (typical && String(typical).includes('mAh')) return typical;
+            // If capacity_typical exists without unit, append unit
+            if (typical) return `${typical} ${unit}`;
+            // Fall back to capacity_range
+            if (range && String(range).includes('mAh')) return range;
+            if (range) return `${range} ${unit}`;
+            return `${unit}`;
+          })()}
         </p>
       </div>
     </div>

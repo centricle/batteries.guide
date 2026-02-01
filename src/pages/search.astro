@@ -302,7 +302,7 @@ const description = 'Search the comprehensive battery database by type, chemistr
               <div>
                 <p class="text-gray-500 text-xs uppercase tracking-wide">Capacity</p>
                 <p class="text-gray-900 font-medium">
-                  ${battery.capacity} ${battery.capacity_unit}
+                  ${battery.capacity && String(battery.capacity).includes('mAh') ? battery.capacity : `${battery.capacity || ''} ${battery.capacity_unit}`.trim()}
                 </p>
               </div>
             </div>

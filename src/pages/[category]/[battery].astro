@@ -98,8 +98,16 @@ const description = `Complete technical specifications for ${battery.type} batte
                 <div class="text-center">
                   <p class="mb-1 text-sm text-gray-500">Capacity</p>
                   <p class="mb-0 text-2xl font-bold text-gray-900">
-                    {primaryChemInfo.capacity_typical || primaryChemInfo.capacity_range}
-                    <span class="text-sm font-normal">{primaryChemInfo.capacity_unit || 'mAh'}</span>
+                    {(() => {
+                      const typical = primaryChemInfo.capacity_typical;
+                      const range = primaryChemInfo.capacity_range;
+                      const unit = primaryChemInfo.capacity_unit || 'mAh';
+                      if (typical && String(typical).includes('mAh')) return typical;
+                      if (typical) return <>{typical} <span class="text-sm font-normal">{unit}</span></>;
+                      if (range && String(range).includes('mAh')) return range;
+                      if (range) return <>{range} <span class="text-sm font-normal">{unit}</span></>;
+                      return <span class="text-sm font-normal">{unit}</span>;
+                    })()}
                   </p>
                 </div>
                 <div class="text-center">
@@ -145,7 +153,16 @@ const description = `Complete technical specifications for ${battery.type} batte
                           </td>
                           <td class="px-2 lg:px-6 py-4">{specs.voltage_nominal}V</td>
                           <td class="px-2 lg:px-6 py-4">
-                            {specs.capacity_typical || specs.capacity_range} {specs.capacity_unit || 'mAh'}
+                            {(() => {
+                              const typical = specs.capacity_typical;
+                              const range = specs.capacity_range;
+                              const unit = specs.capacity_unit || 'mAh';
+                              if (typical && String(typical).includes('mAh')) return typical;
+                              if (typical) return `${typical} ${unit}`;
+                              if (range && String(range).includes('mAh')) return range;
+                              if (range) return `${range} ${unit}`;
+                              return unit;
+                            })()}
                           </td>
                           <td class="px-2 lg:px-6 py-4">{specs.voltage_end}V</td>
                         </tr>

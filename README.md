@@ -1,8 +1,8 @@
-# batteries.guide
+# batteries.fyi
 
 A comprehensive, open-source database of battery specifications for all consumer battery types.
 
-https://batteries.guide
+https://batteries.fyi
 
 ## Features
 

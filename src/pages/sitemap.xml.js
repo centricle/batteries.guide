@@ -1,7 +1,7 @@
 import { getAllCategories } from '../utils/batteryData.js';
 
 export async function GET() {
-  const baseUrl = 'https://batteries.guide';
+  const baseUrl = 'https://batteries.fyi';
   const categories = getAllCategories();
   
   // Static pages
